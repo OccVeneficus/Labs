@@ -1,4 +1,4 @@
-#include "DynamicArray.h"
+﻿#include "DynamicArray.h"
 #include <cstdlib>
 #include <ctime>
 
@@ -46,6 +46,7 @@ int main()
 			system("cls");
 			do
 			{
+				//TODO: а теперь загугли перевод слова witch
 				cout << "Enter index of element after witch";
 				cout << "you want to put new element: ";
 				index = ReadingValue() + 1;

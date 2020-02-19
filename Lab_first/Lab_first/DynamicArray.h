@@ -1,7 +1,8 @@
-#pragma once
+﻿#pragma once
+//TODO: зачем здесь эта библиотека?
 #include <iostream>
 
-
+//TODO: зачем?
 using namespace std;
 
 struct DynamicArray
@@ -11,6 +12,7 @@ struct DynamicArray
 	int *Array;
 };
 
+//TODO: в прототипах нужно указывать имена переменных
 void DeletingArray(int*);
 void CreatingArray(DynamicArray &);
 void PrintingArray(DynamicArray &);

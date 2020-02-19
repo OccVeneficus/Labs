@@ -1,5 +1,7 @@
 ﻿#include "DynamicArray.h"
 
+//TODO: именование функций от существительного, а должно быть от глагола
+//TODO: именование аргумента не соответствует объекту
 void CreatingArray(DynamicArray &arrayParameters)
 {
 	arrayParameters.Length = 8;
@@ -11,6 +13,8 @@ void CreatingArray(DynamicArray &arrayParameters)
 	}
 }
 
+//TODO: именование функций от существительного, а должно быть от глагола
+//TODO: именование аргумента не соответствует объекту
 void PrintingArray(DynamicArray &arrayParameters)
 {
 	cout << "Current array: ";
@@ -38,6 +42,8 @@ void PrintingMenuText()
 	cout << "|_____________________________________________________________|\n";
 }
 
+//TODO: именование функций от существительного, а должно быть от глагола
+//TODO: именование аргумента не соответствует объекту
 void DeletingElement(DynamicArray &arrayParameters)
 {
 	PrintingArray(arrayParameters);
@@ -55,6 +61,8 @@ void DeletingElement(DynamicArray &arrayParameters)
 	--arrayParameters.Length;
 }
 
+//TODO: именование функций от существительного, а должно быть от глагола
+//TODO: именование аргумента не соответствует объекту
 void AddingAfterIndex(DynamicArray &arrayParameters, int index) 
 {
 	PrintingArray(arrayParameters);
@@ -73,6 +81,8 @@ void AddingAfterIndex(DynamicArray &arrayParameters, int index)
 	++arrayParameters.Length;
 }
 
+//TODO: именование функций от существительного, а должно быть от глагола
+//TODO: именование аргумента не соответствует объекту
 void SortingArray(DynamicArray &arrayParameters)
 {
 	for (int i = 1; i < arrayParameters.Length; i++)
@@ -87,6 +97,8 @@ void SortingArray(DynamicArray &arrayParameters)
 	cout << "Sorted array\n";
 }
 
+//TODO: именование функций от существительного, а должно быть от глагола
+//TODO: именование аргумента не соответствует объекту
 void LinearSearching(DynamicArray &arrayParameters)
 {
 	PrintingArray(arrayParameters);
@@ -120,6 +132,8 @@ void LinearSearching(DynamicArray &arrayParameters)
 	}
 }
 
+//TODO: именование функций от существительного, а должно быть от глагола
+//TODO: именование аргумента не соответствует объекту
 void BinarSearching(DynamicArray &arrayParameters)
 {
 	SortingArray(arrayParameters);
@@ -131,6 +145,7 @@ void BinarSearching(DynamicArray &arrayParameters)
 	int rightEnd = arrayParameters.Length;
 	int middleOfArray;
 	bool flag = false;
+	//TODO: используй '!' вместо сравнения с false
 	while (flag == false && leftEnd <= rightEnd)
 	{
 		middleOfArray = (leftEnd + rightEnd) / 2;
@@ -167,11 +182,16 @@ void BinarSearching(DynamicArray &arrayParameters)
 	}
 }
 
+//TODO: именование функций от существительного, а должно быть от глагола
+//TODO: метод Delete и Create антагоничны по действию. Предпочтительно, чтобы
+//антагоничные функции принимали одинаковые аргументы
 void DeletingArray(int *currentArray) 
 {
 	delete[] currentArray;
 }
 
+//TODO: именование функций от существительного, а должно быть от глагола
+//TODO: именование аргумента не соответствует объекту
 void RecreatingArray(DynamicArray &arrayParameters)
 {
 	const int buffer = 8;
@@ -184,6 +204,7 @@ void RecreatingArray(DynamicArray &arrayParameters)
 	arrayParameters.Array = newArray;
 }
 
+//TODO: именование функций от существительного, а должно быть от глагола
 int ReadingValue()
 {
 	int taxableIncome;
