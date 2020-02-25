@@ -1,5 +1,5 @@
-#include "TreapNode.h"
-
+﻿#include "TreapNode.h"
+//TODO: пустые строки
 
 
 TreapNode::TreapNode(int key, int priority, TreapNode *left,
@@ -30,7 +30,7 @@ TreapNode * TreapNode::GetRight()
 {
 	return this->_right;
 }
-
+//TODO: по умолчанию
 TreapNode::~TreapNode()
 {
 

@@ -1,5 +1,5 @@
-#include "BinaryTree.h"
-
+﻿#include "BinaryTree.h"
+//TODO: именование аргумента
 void BinaryTree::DeleteTree(Node * toDelete)
 {
 	if (toDelete == nullptr)
@@ -14,7 +14,7 @@ void BinaryTree::DeleteTree(Node * toDelete)
 
 BinaryTree::BinaryTree()
 {
-	this->_root = nullptr;
+	this->_root = nullptr; //TODO: лучше значение по умолчанию, нет?
 }
 
 

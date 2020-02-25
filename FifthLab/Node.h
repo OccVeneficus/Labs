@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 class Node
 {
@@ -7,7 +7,7 @@ private:
 	Node *_left;
 	Node *_right;
 	Node *_parent;
-	friend class BinaryTree;
+	friend class BinaryTree; //TODO: пустую строку
 public:
 	Node(int data, Node *parent = nullptr);
 	Node *GetLeft();

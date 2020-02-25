@@ -1,4 +1,4 @@
-#include "Node.h"
+﻿#include "Node.h"
 
 Node::Node(int data, Node *parent)
 {
@@ -31,7 +31,7 @@ int Node::GetData()
 {
 	return this->_data;
 }
-
+//TODO: заменить на дефолтный
 Node::~Node()
 {
 

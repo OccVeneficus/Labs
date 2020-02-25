@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <iostream>
 #include <string>
 #include <Windows.h>
@@ -12,7 +12,7 @@
 const int EXIT_MENU_ITEM = 0;
 
 using namespace std;
-
+//TODO: именование
 void TreePrinting(string prefix, Node *node, bool isLeft);
 void TreePrinting(Node *node);
 void TreapPrinting(string prefix, TreapNode *node, bool isLeft);
