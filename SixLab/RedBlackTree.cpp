@@ -1,4 +1,4 @@
-#include "RedBlackTree.h"
+﻿#include "RedBlackTree.h"
 
 
 RedBlackTree::RedBlackTree()
@@ -10,7 +10,7 @@ RedBlackNode * RedBlackTree::GetRoot()
 {
 	return this->_root;
 }
-
+//TODO: именование аргументов
 RedBlackNode *RedBlackTree::InsertBST(RedBlackNode *&root, RedBlackNode *&toInsert)
 {
 	if (root == nullptr)

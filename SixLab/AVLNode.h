@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 class AVLTree;
 
 class AVLNode
@@ -8,7 +8,7 @@ private:
 	AVLNode *_left;
 	AVLNode *_right;
 	int _height;
-	friend class AVLTree;
+	friend class AVLTree; //TODO: пустые строки
 public:
 	int GetKey();
 	AVLNode *GetLeft();

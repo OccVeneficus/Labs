@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "AVLNode.h"
 
 class AVLTree
@@ -15,7 +15,7 @@ private:
 	AVLNode *RemoveAVLNode(int key, AVLNode *root);
 	AVLNode *FindMinimum(AVLNode *root);
 	void DeleteTree(AVLNode *root);
-	int _rotationCounter;
+	int _rotationCounter; //TODO: пустые строки
 public:
 	AVLTree();
 	int GetRotationCounter();

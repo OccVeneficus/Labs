@@ -1,4 +1,4 @@
-#include "AVLTree.h"
+﻿#include "AVLTree.h"
 #include "AVLNode.h"
 
 int AVLTree::GetHeight(AVLNode *root)
@@ -24,7 +24,7 @@ AVLNode * AVLTree::GetRoot()
 {
 	return this->_root;
 }
-
+//TODO: просто Max()
 int AVLTree::MaxFromTwo(int first, int second)
 {
 	return (first > second) ? first : second;
@@ -55,7 +55,7 @@ AVLNode * AVLTree::RotateLeft(AVLNode *&toRotate)
 	_rotationCounter++;
 	return toRotateRight;
 }
-
+//TODO: именование аргументов
 AVLNode * AVLTree::BigRotateLeft(AVLNode *& toRotate)
 {
 	toRotate->_right = RotateRight(toRotate->_right);
@@ -187,7 +187,7 @@ AVLNode * AVLTree::FindMinimum(AVLNode * root)
 		return root;
 	}
 	else
-	{
+	{//TODO: return?
 		FindMinimum(root->_left);
 	}
 }
