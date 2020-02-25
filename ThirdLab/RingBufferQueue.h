@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "DataInOut.h"
 #include "RingBuffer.h"
 
@@ -8,6 +8,7 @@ struct RingBufferQueue
 	bool IsFull;
 };
 
+//TODO: глагол в начале названия
 void RingBufferQueueCreation(RingBufferQueue *);
 void RingQueuePut(RingBufferQueue *, int data);
 int RingQueueGet(RingBufferQueue *);

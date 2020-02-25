@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 struct Stack
 {
@@ -8,6 +8,7 @@ struct Stack
 	bool Empty;
 };
 
+//TODO: именование не от глагола
 void StackCreation(Stack *);
 void StackPush(Stack *, int);
 void DeletingStack(Stack *);

@@ -1,5 +1,6 @@
-#include "RingBufferQueue.h"
+﻿#include "RingBufferQueue.h"
 
+//TODO: именование входного аргумента (здесь и далее)
 void RingBufferQueueCreation(RingBufferQueue *queueParameters)
 {
 	RingBufferCreation(&queueParameters->Queue);

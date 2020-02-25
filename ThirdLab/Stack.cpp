@@ -1,8 +1,8 @@
-#include "DataInOut.h"
+﻿#include "DataInOut.h"
 #include "Stack.h"
 #include "TwoStackQueue.h"
 
-
+//TODO: именование входного аргумента (здесь и далее)
 void StackCreation(Stack *stackParameters)
 {
 	stackParameters->Buffer = new int[BUFFER];

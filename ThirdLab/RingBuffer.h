@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "BufferNode.h"
 
 struct RingBuffer
@@ -11,6 +11,7 @@ struct RingBuffer
 	int OccupiedSpace;
 };
 
+//TODO: именование от глагола
 void RingBufferCreation(RingBuffer *);
 void BufferInitialisation(RingBuffer *);
 void RingBufferPut(RingBuffer *, int);

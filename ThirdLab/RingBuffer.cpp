@@ -1,6 +1,7 @@
-#include "RingBuffer.h"
+﻿#include "RingBuffer.h"
 #include "DataInOut.h"
 
+//TODO: именование входного аргумента (здесь и далее)
 void BufferInitialisation(RingBuffer *bufferParameters)
 {
 	BufferNode *rootNode = new BufferNode;
