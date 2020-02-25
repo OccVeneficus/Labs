@@ -1,4 +1,5 @@
-#pragma once
+﻿#pragma once
+//именование файла не в множественном числе
 #include <iostream>
 #include <ctime>
 
@@ -17,6 +18,7 @@ struct List
 	Node *CurrentNode;
 };
 
+//TODO: именование не от глагола
 void Initialisation(List *);
 void AddingElement(int , List *, Node *);
 void DeletingElement(List *);

@@ -1,4 +1,4 @@
-#include "LinkedLists.h"
+﻿#include "LinkedLists.h"
 #include "DataInputOutput.h"
 
 void Initialisation(List *ListRoot)
@@ -16,6 +16,8 @@ void Initialisation(List *ListRoot)
 	ListRoot->Tail->Field = ReadingValue();
 }
 
+//TODO: проверить написание слова адрес
+//TODO: elementToAdd - неоднозначное название. Можно понять и как значение, и как индекс. Переименовать однозначно
 void AddingElementes(int elementToAdd, List *listParameters, Node *nodeAddres)
 {
 	Node *addresOfNewElement = new Node;
@@ -143,6 +145,8 @@ void BubbleSort(List* list)
 	for (size_t i = 0; i < list->ListLength; ++i)
 	{
 		Node* current = list->Head;
+		//TODO: для таких условий надо оставлять комментарии.
+		//Иначе через два месяца уже никто не будет знать, что делает код
 		while (current != nullptr && current->Next != nullptr)
 		{
 			if (current->Field> current->Next->Field)
