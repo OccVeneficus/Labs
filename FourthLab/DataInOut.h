@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -11,6 +11,7 @@ using namespace std;
 
 const int EXIT_MENU_ITEM = 0;
 
+//TODO: именование
 bool CheckingForInteger(string );
 int ReadingValue();
 void DictionaryMenuTextPrinting();

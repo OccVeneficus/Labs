@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "Chain.h"
 
 class HashTable
@@ -13,7 +13,7 @@ private:
 	//TODO: RSDN(done)
 	bool CheckGrowthFactor();
 	void ReHash();
-	int Hash(string key);
+	int Hash(string key); //TODO: пустую строку перед паблик
 public:
 	HashTable(int tableSize = 5);
 	~HashTable();

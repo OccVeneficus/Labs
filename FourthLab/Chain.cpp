@@ -1,4 +1,4 @@
-#include "DataInOut.h"
+﻿#include "DataInOut.h"
 #include "Chain.h"
 
 Chain::Chain()
@@ -38,6 +38,7 @@ void Chain::AddToEnd(string key, string value)
 	_size++;
 }
 
+//TODO: именование аргумента без существительного
 void Chain::DeleteNode(Node *toDelete)
 {
 	if (toDelete == _head)
