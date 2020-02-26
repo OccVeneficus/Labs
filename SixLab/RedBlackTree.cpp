@@ -11,42 +11,42 @@ RedBlackNode * RedBlackTree::GetRoot()
 	return this->_root;
 }
 //TODO: именование аргументов
-RedBlackNode *RedBlackTree::InsertBST(RedBlackNode *&root, RedBlackNode *&toInsert)
+RedBlackNode *RedBlackTree::InsertBST(RedBlackNode *&root, RedBlackNode *&nodeToInsert)
 {
 	if (root == nullptr)
 	{
-		return toInsert;
+		return nodeToInsert;
 	}
-	if (toInsert->_key < root->_key)
+	if (nodeToInsert->_key < root->_key)
 	{
-		root->_left = InsertBST(root->_left, toInsert);
+		root->_left = InsertBST(root->_left, nodeToInsert);
 		root->_left->_parent = root;
 	}
 	else
 	{
-		root->_right = InsertBST(root->_right, toInsert);
+		root->_right = InsertBST(root->_right, nodeToInsert);
 		root->_right->_parent = root;
 	}
 	return root;
 }
 
-RedBlackNode *RedBlackTree::ReplaceBST(RedBlackNode *toReplace)
+RedBlackNode *RedBlackTree::ReplaceBST(RedBlackNode *nodeToReplace)
 {
-	if (toReplace->_left != nullptr && toReplace->_right != nullptr)
+	if (nodeToReplace->_left != nullptr && nodeToReplace->_right != nullptr)
 	{
-		return FindSuccessor(toReplace->_right);
+		return FindSuccessor(nodeToReplace->_right);
 	}
-	if (toReplace->_left == nullptr && toReplace->_right == nullptr)
+	if (nodeToReplace->_left == nullptr && nodeToReplace->_right == nullptr)
 	{
 		return nullptr;
 	}
-	if (toReplace->_left != nullptr)
+	if (nodeToReplace->_left != nullptr)
 	{
-		return toReplace->_left;
+		return nodeToReplace->_left;
 	}
 	else
 	{
-		return toReplace->_right;
+		return nodeToReplace->_right;
 	}
 }
 
@@ -90,56 +90,56 @@ RedBlackNode * RedBlackTree::SearchByKey(RedBlackNode *root, int key)
 	}
 }
 
-void RedBlackTree::RotateLeft(RedBlackNode *&toRotate)
+void RedBlackTree::RotateLeft(RedBlackNode *&subtreeToRotate)
 {
 	_rotationCounter++;
-	RedBlackNode *rightChild = toRotate->_right;
-	toRotate->_right = rightChild->_left;
-	if (toRotate->_right != nullptr)
+	RedBlackNode *rightChild = subtreeToRotate->_right;
+	subtreeToRotate->_right = rightChild->_left;
+	if (subtreeToRotate->_right != nullptr)
 	{
-		toRotate->_right->_parent = toRotate;
+		subtreeToRotate->_right->_parent = subtreeToRotate;
 	}
-	rightChild->_parent = toRotate->_parent;
-	if (toRotate->_parent == nullptr)
+	rightChild->_parent = subtreeToRotate->_parent;
+	if (subtreeToRotate->_parent == nullptr)
 	{
 		_root = rightChild;
 	}
-	else if (toRotate == toRotate->_parent->_left)
+	else if (subtreeToRotate == subtreeToRotate->_parent->_left)
 	{
-		toRotate->_parent->_left = rightChild;
+		subtreeToRotate->_parent->_left = rightChild;
 	}
 	else
 	{
-		toRotate->_parent->_right = rightChild;
+		subtreeToRotate->_parent->_right = rightChild;
 	}
-	rightChild->_left = toRotate;
-	toRotate->_parent = rightChild;
+	rightChild->_left = subtreeToRotate;
+	subtreeToRotate->_parent = rightChild;
 }
 
-void RedBlackTree::RotateRight(RedBlackNode *&toRotate)
+void RedBlackTree::RotateRight(RedBlackNode *&subtreeToRotate)
 {
 	_rotationCounter++;
-	RedBlackNode *leftChild = toRotate->_left;
-	toRotate->_left = leftChild->_right;
-	if (toRotate->_left != nullptr)
+	RedBlackNode *leftChild = subtreeToRotate->_left;
+	subtreeToRotate->_left = leftChild->_right;
+	if (subtreeToRotate->_left != nullptr)
 	{
-		toRotate->_left->_parent = toRotate;
+		subtreeToRotate->_left->_parent = subtreeToRotate;
 	}
-	leftChild->_parent = toRotate->_parent;
-	if (toRotate->_parent == nullptr)
+	leftChild->_parent = subtreeToRotate->_parent;
+	if (subtreeToRotate->_parent == nullptr)
 	{
 		_root = leftChild;
 	}
-	else if (toRotate == toRotate->_parent->_left)
+	else if (subtreeToRotate == subtreeToRotate->_parent->_left)
 	{
-		toRotate->_parent->_left = leftChild;
+		subtreeToRotate->_parent->_left = leftChild;
 	}
 	else
 	{
-		toRotate->_parent->_right = leftChild;
+		subtreeToRotate->_parent->_right = leftChild;
 	}
-	leftChild->_right = toRotate;
-	toRotate->_parent = leftChild;
+	leftChild->_right = subtreeToRotate;
+	subtreeToRotate->_parent = leftChild;
 }
 
 void RedBlackTree::InsertNode(int key, RedBlackNode *root)
@@ -217,15 +217,15 @@ void RedBlackTree::FixInsert(RedBlackNode *&insertedNode)
 	_root->_isRed = false;
 }
 
-void RedBlackTree::DeleteNode(RedBlackNode *&toDelete)
+void RedBlackTree::DeleteNode(RedBlackNode *&nodeToDelete)
 {
-	RedBlackNode *replacedNode = ReplaceBST(toDelete);
+	RedBlackNode *replacedNode = ReplaceBST(nodeToDelete);
 	bool doubleBlack = ((replacedNode == nullptr || replacedNode->_isRed == false)
-		&& (toDelete->_isRed == false));
-	RedBlackNode *parent = toDelete->_parent;
+		&& (nodeToDelete->_isRed == false));
+	RedBlackNode *parent = nodeToDelete->_parent;
 	if (replacedNode == nullptr)
 	{
-		if (toDelete == _root)
+		if (nodeToDelete == _root)
 		{
 			_root = nullptr;
 		}
@@ -233,16 +233,16 @@ void RedBlackTree::DeleteNode(RedBlackNode *&toDelete)
 		{
 			if (doubleBlack)
 			{
-				FixDoubleBlack(toDelete);
+				FixDoubleBlack(nodeToDelete);
 			}
 			else
 			{
-				if (toDelete->GetBrother() != nullptr)
+				if (nodeToDelete->GetBrother() != nullptr)
 				{
-					toDelete->GetBrother()->_isRed = true;
+					nodeToDelete->GetBrother()->_isRed = true;
 				}
 			}
-			if (toDelete->IsOnLeft())
+			if (nodeToDelete->IsOnLeft())
 			{
 				parent->_left = nullptr;
 			}
@@ -251,21 +251,21 @@ void RedBlackTree::DeleteNode(RedBlackNode *&toDelete)
 				parent->_right = nullptr;
 			}
 		}
-		delete toDelete;
+		delete nodeToDelete;
 		return;
 	}
-	if (toDelete->_left == nullptr || toDelete->_right == nullptr)
+	if (nodeToDelete->_left == nullptr || nodeToDelete->_right == nullptr)
 	{
-		if (toDelete == _root)
+		if (nodeToDelete == _root)
 		{
-			toDelete->_key = replacedNode->_key;
-			toDelete->_left = nullptr;
-			toDelete->_right = nullptr;
+			nodeToDelete->_key = replacedNode->_key;
+			nodeToDelete->_left = nullptr;
+			nodeToDelete->_right = nullptr;
 			delete replacedNode;
 		}
 		else
 		{
-			if (toDelete->IsOnLeft())
+			if (nodeToDelete->IsOnLeft())
 			{
 				parent->_left = replacedNode;
 			}
@@ -286,8 +286,8 @@ void RedBlackTree::DeleteNode(RedBlackNode *&toDelete)
 		return;
 	}
 	int temp = replacedNode->_key;
-	replacedNode->_key = toDelete->_key;
-	toDelete->_key = temp;
+	replacedNode->_key = nodeToDelete->_key;
+	nodeToDelete->_key = temp;
 	DeleteNode(replacedNode);
 }
 
@@ -322,14 +322,14 @@ void RedBlackTree::DeleteTree(RedBlackNode *root)
 	delete root;
 }
 
-void RedBlackTree::FixDoubleBlack(RedBlackNode * toFix)
+void RedBlackTree::FixDoubleBlack(RedBlackNode * subtreeToFix)
 {
-	if (toFix == _root)
+	if (subtreeToFix == _root)
 	{
 		return;
 	}
-	RedBlackNode *brother = toFix->GetBrother();
-	RedBlackNode *parent = toFix->_parent;
+	RedBlackNode *brother = subtreeToFix->GetBrother();
+	RedBlackNode *parent = subtreeToFix->_parent;
 	if (brother == nullptr)
 	{
 		FixDoubleBlack(parent);
@@ -348,7 +348,7 @@ void RedBlackTree::FixDoubleBlack(RedBlackNode * toFix)
 			{
 				RotateLeft(parent);
 			}
-			FixDoubleBlack(toFix);
+			FixDoubleBlack(subtreeToFix);
 		}
 		else
 		{

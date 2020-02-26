@@ -25,47 +25,47 @@ AVLNode * AVLTree::GetRoot()
 	return this->_root;
 }
 //TODO: просто Max()
-int AVLTree::MaxFromTwo(int first, int second)
+int AVLTree::Max(int first, int second)
 {
 	return (first > second) ? first : second;
 }
 
-AVLNode *AVLTree::RotateRight(AVLNode *&toRotate)
+AVLNode *AVLTree::RotateRight(AVLNode *&subtreeToRotate)
 {
-	AVLNode *toRotateLeft = toRotate->_left;
-	toRotate->_left = toRotateLeft->_right;
-	toRotateLeft->_right = toRotate;
-	toRotate->_height = MaxFromTwo(GetHeight(toRotate->_left),
-		GetHeight(toRotate->_right))+ 1;
-	toRotateLeft->_height = MaxFromTwo(GetHeight(toRotateLeft->_left),
-		GetHeight(toRotate)) + 1;
+	AVLNode *toRotateLeft = subtreeToRotate->_left;
+	subtreeToRotate->_left = toRotateLeft->_right;
+	toRotateLeft->_right = subtreeToRotate;
+	subtreeToRotate->_height = Max(GetHeight(subtreeToRotate->_left),
+		GetHeight(subtreeToRotate->_right))+ 1;
+	toRotateLeft->_height = Max(GetHeight(toRotateLeft->_left),
+		GetHeight(subtreeToRotate)) + 1;
 	_rotationCounter++;
 	return toRotateLeft;
 }
 
-AVLNode * AVLTree::RotateLeft(AVLNode *&toRotate)
+AVLNode * AVLTree::RotateLeft(AVLNode *&subtreeToRotate)
 {
-	AVLNode *toRotateRight = toRotate->_right;
-	toRotate->_right = toRotateRight->_left;
-	toRotateRight->_left = toRotate;
-	toRotate->_height = MaxFromTwo(GetHeight(toRotate->_left),
-		GetHeight(toRotate->_right)) + 1;
-	toRotateRight->_height = MaxFromTwo(GetHeight(toRotate->_right),
-		GetHeight(toRotate)) + 1;
+	AVLNode *toRotateRight = subtreeToRotate->_right;
+	subtreeToRotate->_right = toRotateRight->_left;
+	toRotateRight->_left = subtreeToRotate;
+	subtreeToRotate->_height = Max(GetHeight(subtreeToRotate->_left),
+		GetHeight(subtreeToRotate->_right)) + 1;
+	toRotateRight->_height = Max(GetHeight(subtreeToRotate->_right),
+		GetHeight(subtreeToRotate)) + 1;
 	_rotationCounter++;
 	return toRotateRight;
 }
 //TODO: именование аргументов
-AVLNode * AVLTree::BigRotateLeft(AVLNode *& toRotate)
+AVLNode * AVLTree::BigRotateLeft(AVLNode *& subtreeToRotate)
 {
-	toRotate->_right = RotateRight(toRotate->_right);
-	return RotateLeft(toRotate);
+	subtreeToRotate->_right = RotateRight(subtreeToRotate->_right);
+	return RotateLeft(subtreeToRotate);
 }
 
-AVLNode * AVLTree::BigRotateRight(AVLNode *& toRotate)
+AVLNode * AVLTree::BigRotateRight(AVLNode *& subtreeToRotate)
 {
-	toRotate->_left = RotateLeft(toRotate->_left);
-	return RotateRight(toRotate);
+	subtreeToRotate->_left = RotateLeft(subtreeToRotate->_left);
+	return RotateRight(subtreeToRotate);
 }
 
 AVLNode * AVLTree::InsertAVLNode(int key, AVLNode *root)
@@ -104,7 +104,7 @@ AVLNode * AVLTree::InsertAVLNode(int key, AVLNode *root)
 			}
 		}
 	}
-	root->_height = MaxFromTwo(GetHeight(root->_left),
+	root->_height = Max(GetHeight(root->_left),
 		GetHeight(root->_right)) + 1;
 	return root;
 }
@@ -147,7 +147,7 @@ AVLNode * AVLTree::RemoveAVLNode(int key, AVLNode * root)
 	{
 		return root;
 	}
-	root->_height = MaxFromTwo(GetHeight(root->_left),
+	root->_height = Max(GetHeight(root->_left),
 		GetHeight(root->_right)) + 1;
 	if ((GetHeight(root->_left) - GetHeight(root->_right)) == 2)
 	{
@@ -184,10 +184,15 @@ AVLNode * AVLTree::FindMinimum(AVLNode * root)
 	}
 	else if (root->_left == nullptr)
 	{
-		return root;
+		return root; //возврат из метода произойдет в любом случае
 	}
 	else
-	{//TODO: return?
+	{//TODO: return? 
+		//рекурсия. вызывает сам себя (в качестве параметра левый элемент от текущего,
+		//возвращает его если следующий левый nullptr)
+		//root в смысле корень ветки в которой нужно искать минимум, с него начинаем, он
+		//в рекурсии меняестся и его и возвращаем, возможно стоит переименовать на 
+		// например minimum
 		FindMinimum(root->_left);
 	}
 }

@@ -9,6 +9,7 @@ private:
 	AVLNode *_right;
 	int _height;
 	friend class AVLTree; //TODO: пустые строки
+
 public:
 	int GetKey();
 	AVLNode *GetLeft();

@@ -6,16 +6,17 @@ class AVLTree
 private:
 	AVLNode *_root;
 	int GetHeight(AVLNode *root);
-	int MaxFromTwo(int first, int second);
-	AVLNode *RotateRight(AVLNode *&toRotate);
-	AVLNode *RotateLeft(AVLNode *&toRotate);
-	AVLNode *BigRotateLeft(AVLNode *&toRotate);
-	AVLNode *BigRotateRight(AVLNode *&toRotate);
+	int Max(int first, int second);
+	AVLNode *RotateRight(AVLNode *& subtreeToRotate);
+	AVLNode *RotateLeft(AVLNode *& subtreeToRotate);
+	AVLNode *BigRotateLeft(AVLNode *& subtreeToRotate);
+	AVLNode *BigRotateRight(AVLNode *& subtreeToRotate);
 	AVLNode *InsertAVLNode(int key, AVLNode *root);
 	AVLNode *RemoveAVLNode(int key, AVLNode *root);
 	AVLNode *FindMinimum(AVLNode *root);
 	void DeleteTree(AVLNode *root);
 	int _rotationCounter; //TODO: пустые строки
+
 public:
 	AVLTree();
 	int GetRotationCounter();

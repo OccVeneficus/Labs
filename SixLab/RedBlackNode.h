@@ -10,6 +10,7 @@ private:
 	RedBlackNode *_right;
 	RedBlackNode *_parent;
 	friend class RedBlackTree; //TODO: пустые строки
+
 public:
 	RedBlackNode(int key, bool isRed = true, RedBlackNode *left = nullptr,
 		RedBlackNode *right = nullptr, RedBlackNode *parent = nullptr);

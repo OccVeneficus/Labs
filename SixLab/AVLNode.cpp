@@ -1,7 +1,6 @@
 ﻿#include "AVLNode.h"
 //TODO: пустые строки
 
-
 int AVLNode::GetKey()
 {
 	return this->_key;
