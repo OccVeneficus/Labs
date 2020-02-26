@@ -19,11 +19,11 @@ struct List
 };
 
 //TODO: именование не от глагола
-void Initialisation(List *);
-void AddingElement(int , List *, Node *);
-void DeletingElement(List *);
-void BubbleSort(List*);
+void Initialize(List *);
+void AddElement(int , List *, Node *);
+void DeleteElement(List *);
+void Sort(List*);
 void SwapNode(List*, Node*);
-void SearchingElement(struct List *, int);
-void DeletingAllList(List *);
-void AddingElementes(int, List *, Node *);
+void SearchElement(struct List *, int);
+void DeleteAllList(List *);
+void AddElementes(int, List *, Node *);

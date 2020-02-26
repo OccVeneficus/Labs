@@ -1,7 +1,7 @@
-﻿#include "LinkedLists.h"
-#include "DataInputOutput.h"
+﻿#include "LinkedList.h"
+#include "UserInputOutput.h"
 
-void Initialisation(List *ListRoot)
+void Initialize(List *ListRoot)
 {
 	const int startingLength = 2;
 	ListRoot->Head = new Node;
@@ -12,13 +12,43 @@ void Initialisation(List *ListRoot)
 	ListRoot->Tail->Previous = ListRoot->Head;
 	ListRoot->CurrentNode = ListRoot->Head;
 	ListRoot->ListLength = startingLength;
-	ListRoot->Head->Field = ReadingValue();
-	ListRoot->Tail->Field = ReadingValue();
+	ListRoot->Head->Field = ReadValue();
+	ListRoot->Tail->Field = ReadValue();
 }
 
 //TODO: проверить написание слова адрес
 //TODO: elementToAdd - неоднозначное название. Можно понять и как значение, и как индекс. Переименовать однозначно
-void AddingElementes(int elementToAdd, List *listParameters, Node *nodeAddres)
+void AddElementes(int valueToAdd, List *listParameters, Node *nodeAddress)
+{
+	Node *addressOfNewElement = new Node;
+	Node *temporaryNodeAddress;
+	addressOfNewElement->Field = valueToAdd;
+	listParameters->ListLength++;
+	if (nodeAddress->Next == nullptr)
+	{
+		addressOfNewElement->Next = nullptr;
+		addressOfNewElement->Previous = nodeAddress;
+		nodeAddress->Next = addressOfNewElement;
+		listParameters->Tail = addressOfNewElement;
+	}
+	else if (nodeAddress->Previous == nullptr)
+	{
+		addressOfNewElement->Next = nodeAddress;
+		addressOfNewElement->Previous = nullptr;
+		nodeAddress->Previous = addressOfNewElement;
+		listParameters->Head = addressOfNewElement;
+	}
+	else
+	{
+		temporaryNodeAddress = nodeAddress->Next;
+		nodeAddress->Next = addressOfNewElement;
+		temporaryNodeAddress->Previous = addressOfNewElement;
+		addressOfNewElement->Next = temporaryNodeAddress;
+		addressOfNewElement->Previous = nodeAddress;
+	}
+}
+
+void AddElement(int elementToAdd, List *listParameters, Node *nodeAddres) 
 {
 	Node *addresOfNewElement = new Node;
 	Node *temporaryNodeAddres;
@@ -48,37 +78,7 @@ void AddingElementes(int elementToAdd, List *listParameters, Node *nodeAddres)
 	}
 }
 
-void AddingElement(int elementToAdd, List *listParameters, Node *nodeAddres) 
-{
-	Node *addresOfNewElement = new Node;
-	Node *temporaryNodeAddres;
-	addresOfNewElement->Field = elementToAdd;
-	listParameters->ListLength++;
-	if (nodeAddres->Next == nullptr)
-	{
-		addresOfNewElement->Next = nullptr;
-		addresOfNewElement->Previous = nodeAddres;
-		nodeAddres->Next = addresOfNewElement;
-		listParameters->Tail = addresOfNewElement;
-	}
-	else if (nodeAddres->Previous == nullptr)
-	{
-		addresOfNewElement->Next = nodeAddres;
-		addresOfNewElement->Previous = nullptr;
-		nodeAddres->Previous = addresOfNewElement;
-		listParameters->Head = addresOfNewElement;
-	}
-	else
-	{
-		temporaryNodeAddres = nodeAddres->Next;
-		nodeAddres->Next = addresOfNewElement;
-		temporaryNodeAddres->Previous = addresOfNewElement;
-		addresOfNewElement->Next = temporaryNodeAddres;
-		addresOfNewElement->Previous = nodeAddres;
-	}
-}
-
-void DeletingElement(List *ListParameters)
+void DeleteElement(List *ListParameters)
 {
 	if (ListParameters->ListLength == 0)
 	{
@@ -140,13 +140,15 @@ void SwapNode(List* list, Node* current)
 	}
 }
 
-void BubbleSort(List* list)
+void Sort(List* list)
 {
 	for (size_t i = 0; i < list->ListLength; ++i)
 	{
 		Node* current = list->Head;
 		//TODO: для таких условий надо оставлять комментарии.
 		//Иначе через два месяца уже никто не будет знать, что делает код
+
+		/*Bubble sort for list*/
 		while (current != nullptr && current->Next != nullptr)
 		{
 			if (current->Field> current->Next->Field)
@@ -158,7 +160,7 @@ void BubbleSort(List* list)
 	}
 }
 
-void SearchingElement(struct List *listParameters, int elementToSearch)
+void SearchElement(struct List *listParameters, int elementToSearch)
 {
 	struct Node * nodeToCheck = listParameters->Head;
 	int counter = 0;
@@ -178,7 +180,7 @@ void SearchingElement(struct List *listParameters, int elementToSearch)
 	}
 }
 
-void DeletingAllList(List *listParameters)
+void DeleteAllList(List *listParameters)
 {
 	Node *nodeToDelete = listParameters->Head;
 	for (int i = 0; i < listParameters->ListLength; i++)

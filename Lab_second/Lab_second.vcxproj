@@ -115,13 +115,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="DataInputOutput.cpp" />
-    <ClCompile Include="LinkedLists.cpp" />
+    <ClCompile Include="UserInputOutput.cpp" />
+    <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="UserInterface.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DataInputOutput.h" />
-    <ClInclude Include="LinkedLists.h" />
+    <ClInclude Include="UserInputOutput.h" />
+    <ClInclude Include="LinkedList.h" />
+    <ClInclude Include="UserInterface.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

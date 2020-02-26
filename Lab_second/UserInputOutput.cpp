@@ -1,12 +1,12 @@
 ﻿//TODO: плохое именование для файла.
 // Функции ввода/вывода лучше в один файл,
 // а функции чисто пользовательского интерфейса - в другой
-#include "DataInputOutput.h"
-#include "LinkedLists.h"
+#include "UserInputOutput.h"
+#include "LinkedList.h"
 #include <string>
 #include <sstream>
 
-bool CheckingForInteger(string value)
+bool CheckForInteger(string value)
 {
 	int size = value.length();
 	if (isdigit((unsigned char)value[0]) || (unsigned char)value[0] == '-')
@@ -25,14 +25,14 @@ bool CheckingForInteger(string value)
 	}
 }
 
-int ReadingValue()
+int ReadValue()
 {
 	string inputValue;
 	int outputValue;
 	while (true)
 	{
 		getline(cin, inputValue);
-		bool intCheckFlag = CheckingForInteger(inputValue);
+		bool intCheckFlag = CheckForInteger(inputValue);
 		istringstream inputStringStream(inputValue);
 		int number;
 		inputStringStream >> number;
@@ -49,7 +49,7 @@ int ReadingValue()
 	}
 }
 
-void ListPrinting(List *listParameters)
+void PrintList(List *listParameters)
 {
 	cout << endl;
 	struct Node *elementToPrint;
@@ -62,24 +62,7 @@ void ListPrinting(List *listParameters)
 	cout << endl;
 }
 
-void MenuPrinting()
-{
-	cout << " ______________________________________________________________\n";
-	cout << "|                       ||||||MENU||||||                      |\n";
-	cout << "|List of available functions:                                 |\n";
-	cout << "|(To choose function type it number from list below)          |\n";
-	cout << "| 1. Delete element from list.                                |\n";
-	cout << "| 2. Add element to begin of list.                            |\n";
-	cout << "| 3. Add element to end of list .                             |\n";
-	cout << "| 4. Add element after specific element in list.              |\n";
-	cout << "| 5. Add element before specific element in list.             |\n";
-	cout << "| 6. Sort list.                                               |\n";
-	cout << "| 7. Linear search.                                           |\n";
-	cout << "| 8. Exit                                                     |\n";
-	cout << "|_____________________________________________________________|\n";
-}
-
-bool PositionChoosing(List *ListParameters)
+bool ChoosePosition(List *ListParameters)
 {
 	int positionOfElement;
 	if (ListParameters->ListLength == 0)
@@ -90,7 +73,7 @@ bool PositionChoosing(List *ListParameters)
 	{
 		cout << "Enter position of element(from 1 to " <<
 			ListParameters->ListLength <<"):";
-		positionOfElement = ReadingValue();
+		positionOfElement = ReadValue();
 	} while (positionOfElement > ListParameters->ListLength ||
 		positionOfElement <= 0);
 	clock_t begin = clock();
