@@ -32,7 +32,3 @@ int Node::GetData()
 	return this->_data;
 }
 //TODO: заменить на дефолтный
-Node::~Node()
-{
-
-}

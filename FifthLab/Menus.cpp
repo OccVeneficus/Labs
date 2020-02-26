@@ -7,11 +7,11 @@ void MainMenu()
 	int menuItem;
 	do
 	{
-		MainMenuPrinting();
+		PrintMainMenu();
 		do
 		{
 			cout << "Choose number from list above(integer only):";
-			menuItem = ReadingValue();
+			menuItem = ReadValue();
 		} 
 		while (menuItem > 2 || menuItem < 0);
 		switch (menuItem)
@@ -44,12 +44,12 @@ void BinaryTreeMenu(BinaryTree *userTree)
 	{
 		int value;
 		system("cls");
-		TreePrinting(userTree->GetRoot());
-		BinaryMenuPrinting();
+		PrintTree(userTree->GetRoot());
+		PrintBinaryMenu();
 		do
 		{
 			cout << "Choose number from list above(integer only):";
-			menuItem = ReadingValue();
+			menuItem = ReadValue();
 		}
 		while (menuItem > 5 || menuItem < 0);
 		switch (menuItem)
@@ -57,14 +57,14 @@ void BinaryTreeMenu(BinaryTree *userTree)
 		case 1:
 			{
 				cout << "Enter value you want to add: ";
-				value = ReadingValue();
+				value = ReadValue();
 				userTree->AddNode(value);
 				break;
 			}
 		case 2:
 			{
 				cout << "Enter value you want to delete:";
-				value = ReadingValue();
+				value = ReadValue();
 				Node *root = userTree->GetRoot();
 				userTree->DeleteNode(value, root);
 				break;
@@ -72,7 +72,7 @@ void BinaryTreeMenu(BinaryTree *userTree)
 		case 3:
 			{
 				cout << "Enter value you want to search:";
-				value = ReadingValue();
+				value = ReadValue();
 				if ((toShow = userTree->SearchNode(value, userTree->GetRoot()))
 					!= nullptr)
 				{
@@ -124,12 +124,12 @@ void TreapMenu(Treap *userTreap)
 	{
 		int value;
 		system("cls");
-		TreapPrinting(userTreap->GetRoot());
-		TreapMenuPrinting();
+		PrintTreap(userTreap->GetRoot());
+		PrintTreapMenu();
 		do
 		{
 			cout << "Choose number from list above(integer only):";
-			menuItem = ReadingValue();
+			menuItem = ReadValue();
 		} 
 		while (menuItem > 5 || menuItem < 0);
 		switch (menuItem)
@@ -137,21 +137,21 @@ void TreapMenu(Treap *userTreap)
 		case 1:
 			{
 				cout << "Enter value you want to add: ";
-				value = ReadingValue();
+				value = ReadValue();
 				userTreap->Add(value);
 				break;
 			}
 		case 2:
 			{
 				cout << "Enter value you want to delete:";
-				value = ReadingValue();
+				value = ReadValue();
 				userTreap->Remove(value);
 				break;
 			}
 		case 3:
 		{
 			cout << "Enter value you want to search:";
-			value = ReadingValue();
+			value = ReadValue();
 			if ((toShow = userTreap->Search(value, userTreap->GetRoot()))
 				!= nullptr)
 			{
@@ -166,7 +166,7 @@ void TreapMenu(Treap *userTreap)
 		case 4:
 		{
 			cout << "Enter value you want to add: ";
-			value = ReadingValue();
+			value = ReadValue();
 			TreapNode *newNode = new TreapNode(value, rand()%100);
 			toShow = userTreap->GetRoot();
  			userTreap->OptimisedAdd(toShow, newNode);
@@ -175,7 +175,7 @@ void TreapMenu(Treap *userTreap)
 		case 5:
 		{
 			cout << "Enter value you want to delete:";
-			value = ReadingValue();
+			value = ReadValue();
 			toShow = userTreap->GetRoot();
 			userTreap->OptimisedRemove(value, toShow);
 			break;

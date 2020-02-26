@@ -1,6 +1,6 @@
 ﻿#include "DataInOut.h"
 
-bool CheckingForInteger(string value)
+bool CheckForInteger(string value)
 {
 	int size = value.length();
 	if (isdigit((unsigned char)value[0]) || (unsigned char)value[0] == '-')
@@ -19,14 +19,14 @@ bool CheckingForInteger(string value)
 	}
 }
 
-int ReadingValue()
+int ReadValue()
 {
 	string inputValue;
 	int outputValue;
 	while (true)
 	{
 		getline(cin, inputValue);
-		bool intCheckFlag = CheckingForInteger(inputValue);
+		bool intCheckFlag = CheckForInteger(inputValue);
 		istringstream inputStringStream(inputValue);
 		int number;
 		inputStringStream >> number;
@@ -43,7 +43,7 @@ int ReadingValue()
 	}
 }
 
-void MainMenuPrinting()
+void PrintMainMenu()
 {
 	cout << endl;
 	cout << " ______________________________________________________________\n";
@@ -55,7 +55,7 @@ void MainMenuPrinting()
 	cout << "|_____________________________________________________________|\n";
 }
 
-void BinaryMenuPrinting()
+void PrintBinaryMenu()
 {
 	cout << endl;
 	cout << " ______________________________________________________________\n";
@@ -70,7 +70,7 @@ void BinaryMenuPrinting()
 	cout << "|_____________________________________________________________|\n";
 }
 
-void TreapMenuPrinting()
+void PrintTreapMenu()
 {
 	cout << endl;
 	cout << " ______________________________________________________________\n";
@@ -85,40 +85,40 @@ void TreapMenuPrinting()
 	cout << "|_____________________________________________________________|\n";
 }
 
-void TreePrinting(string prefix, Node *node, bool isLeft)
+void PrintTree(string prefix, Node *node, bool isLeft)
 {
 	if (node != nullptr)
 	{
 		cout << prefix;
 		wcout << (isLeft ? "|-- " : "\\-- ");
 		cout << node->GetData() << endl;
-		TreePrinting(prefix + (isLeft ? "|   " : "    "),
+		PrintTree(prefix + (isLeft ? "|   " : "    "),
 			node->GetLeft(), true);
-		TreePrinting(prefix + (isLeft ? "|   " : "    "),
+		PrintTree(prefix + (isLeft ? "|   " : "    "),
 			node->GetRight(), false);
 	}
 }
 
-void TreePrinting(Node * node)
+void PrintTree(Node * node)
 {
-	TreePrinting("", node, false);
+	PrintTree("", node, false);
 }
 
-void TreapPrinting(string prefix, TreapNode *node, bool isLeft)
+void PrintTreap(string prefix, TreapNode *node, bool isLeft)
 {
 	if (node != nullptr)
 	{
 		cout << prefix;
 		wcout << (isLeft ? "|-- " : "\\-- ");
 		cout << node->GetKey() <<" ; "<< node->GetPriority()<<  endl;
-		TreapPrinting(prefix + (isLeft ? "|   " : "    "),
+		PrintTreap(prefix + (isLeft ? "|   " : "    "),
 			node->GetLeft(), true);
-		TreapPrinting(prefix + (isLeft ? "|   " : "    "),
+		PrintTreap(prefix + (isLeft ? "|   " : "    "),
 			node->GetRight(), false);
 	}
 }
 
-void TreapPrinting(TreapNode *node)
+void PrintTreap(TreapNode *node)
 {
-	TreapPrinting("", node, false);
+	PrintTreap("", node, false);
 }

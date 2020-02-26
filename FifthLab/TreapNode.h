@@ -17,6 +17,5 @@ public:
 	int GetPriority();
 	TreapNode *GetLeft();
 	TreapNode *GetRight();
-	~TreapNode();
 };
 

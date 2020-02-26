@@ -8,11 +8,11 @@ private:
 	Node *_right;
 	Node *_parent;
 	friend class BinaryTree; //TODO: пустую строку
+
 public:
 	Node(int data, Node *parent = nullptr);
 	Node *GetLeft();
 	Node *GetRight();
 	Node operator=(const Node &other);
 	int GetData();
-	~Node();
 };

@@ -13,12 +13,12 @@ const int EXIT_MENU_ITEM = 0;
 
 using namespace std;
 //TODO: именование
-void TreePrinting(string prefix, Node *node, bool isLeft);
-void TreePrinting(Node *node);
-void TreapPrinting(string prefix, TreapNode *node, bool isLeft);
-void TreapPrinting(TreapNode *node);
-bool CheckingForInteger(string);
-int ReadingValue();
-void MainMenuPrinting();
-void BinaryMenuPrinting();
-void TreapMenuPrinting();
+void PrintTree(string prefix, Node *node, bool isLeft);
+void PrintTree(Node *node);
+void PrintTreap(string prefix, TreapNode *node, bool isLeft);
+void PrintTreap(TreapNode *node);
+bool CheckForInteger(string value);
+int ReadValue();
+void PrintMainMenu();
+void PrintBinaryMenu();
+void PrintTreapMenu();

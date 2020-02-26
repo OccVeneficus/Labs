@@ -11,8 +11,7 @@ public:
 	TreapNode *Merge(TreapNode *left, TreapNode *right);
 	void Split(TreapNode *node, int key, TreapNode *&left, TreapNode *&right);
 	TreapNode *Add(int key);
-	void OptimisedAdd(TreapNode *&current,
-		TreapNode *newNode); //TODO: зачем перенес на другую строку?
+	void OptimisedAdd(TreapNode *&current, TreapNode *newNode); //TODO: зачем перенес на другую строку?
 	TreapNode *Remove(int key);
 	TreapNode *OptimisedRemove(int key, TreapNode *&current);
 	TreapNode *Search(int key, TreapNode *toCheck);

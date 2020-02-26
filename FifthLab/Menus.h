@@ -4,5 +4,5 @@
 #include "Treap.h"
 
 void MainMenu();
-void BinaryTreeMenu(BinaryTree *);
-void TreapMenu(Treap *);
+void BinaryTreeMenu(BinaryTree *userTree);
+void TreapMenu(Treap *userTreap);

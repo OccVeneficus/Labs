@@ -4,7 +4,7 @@
 class BinaryTree
 {
 private:
-	Node *_root;
+	Node *_root = nullptr;
 	void DeleteTree(Node *toDelete);
 public:
 	BinaryTree();

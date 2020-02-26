@@ -1,20 +1,21 @@
 ﻿#include "BinaryTree.h"
 //TODO: именование аргумента
-void BinaryTree::DeleteTree(Node * toDelete)
+void BinaryTree::DeleteTree(Node * nodeToDelete)
 {
-	if (toDelete == nullptr)
+	if (nodeToDelete == nullptr)
 	{
 		return;
 	}
-	DeleteTree(toDelete->_right);
-	DeleteTree(toDelete->_left);
-	delete toDelete;
-	toDelete = nullptr;
+	DeleteTree(nodeToDelete->_right);
+	DeleteTree(nodeToDelete->_left);
+	delete nodeToDelete;
+	nodeToDelete = nullptr;
 }
 
 BinaryTree::BinaryTree()
 {
-	this->_root = nullptr; //TODO: лучше значение по умолчанию, нет?
+	//this->_root = nullptr; 
+	//TODO: лучше значение по умолчанию, нет?
 }
 
 
