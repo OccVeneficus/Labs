@@ -3,54 +3,54 @@
 #include "TwoStackQueue.h"
 
 //TODO: именование входного аргумента (здесь и далее)
-void StackCreation(Stack *stackParameters)
+void CreateStack(Stack *stack)
 {
-	stackParameters->Buffer = new int[BUFFER];
-	stackParameters->BufferSize = BUFFER;
-	stackParameters->TopIndex = -1;
-	stackParameters->Empty = true;
+	stack->Buffer = new int[BUFFER];
+	stack->BufferSize = BUFFER;
+	stack->TopIndex = -1;
+	stack->Empty = true;
 }
 
-void StackBufferRecreation(Stack *stackParameters)
+void StackBufferRecreation(Stack *stack)
 {
-	int newSize = stackParameters->BufferSize*1.5;
-	stackParameters->BufferSize = newSize;
+	int newSize = stack->BufferSize*1.5;
+	stack->BufferSize = newSize;
 	int *newBuffer = new int[newSize];
-	for (int i = 0; i <= stackParameters->TopIndex; i++)
+	for (int i = 0; i <= stack->TopIndex; i++)
 	{
-		newBuffer[i] = stackParameters->Buffer[i];
+		newBuffer[i] = stack->Buffer[i];
 	}
-	delete[] stackParameters->Buffer;
-	stackParameters->Buffer = newBuffer; 
+	delete[] stack->Buffer;
+	stack->Buffer = newBuffer; 
 }
 
-void StackPush(Stack *stackParameters, int valueToPush)
+void PushInStack(Stack *stack, int valueToPush)
 {
-	if (stackParameters->BufferSize == stackParameters->TopIndex + 1)
+	if (stack->BufferSize == stack->TopIndex + 1)
 	{
 		cout << "Stack is full." << endl;
 	}
 	else
 	{
-		stackParameters->TopIndex++;
-		stackParameters->Buffer[stackParameters->TopIndex] = valueToPush;
-		stackParameters->Empty = false;
+		stack->TopIndex++;
+		stack->Buffer[stack->TopIndex] = valueToPush;
+		stack->Empty = false;
 	}
 }
 
-void DeletingStack(Stack *stackParameters)
+void DeleteStack(Stack *stack)
 {
-	delete[] stackParameters->Buffer;
-	StackCreation(stackParameters);
+	delete[] stack->Buffer;
+	CreateStack(stack);
 }
 
-int StackPop(Stack *stackParameters)
+int PopFromStack(Stack *stack)
 {
-	int valueToPop = stackParameters->Buffer[stackParameters->TopIndex];
-	stackParameters->TopIndex--;
-	if (stackParameters->TopIndex == -1)
+	int valueToPop = stack->Buffer[stack->TopIndex];
+	stack->TopIndex--;
+	if (stack->TopIndex == -1)
 	{
-		stackParameters->Empty = true;
+		stack->Empty = true;
 	}
 	return valueToPop;
 }

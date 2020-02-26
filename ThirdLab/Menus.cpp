@@ -9,7 +9,7 @@ void RingBufferMenu()
 {
 	RingBuffer ringBufferParameters;
 	int value;
-	RingBufferCreation(&ringBufferParameters);
+	CreateRingBuffer(&ringBufferParameters);
 	int menuItem;
 	do
 	{
@@ -58,7 +58,7 @@ void RingBufferMenu()
 			}
 		}
 	} while (menuItem != EXIT_MENU_ITEM);
-	RingBufferDeleting(&ringBufferParameters);
+	RingBufferDelete(&ringBufferParameters);
 	system("cls");
 }
 
@@ -83,7 +83,7 @@ void StackMenu(Stack *currentStack)
 				system("cls");
 				cout << "Enter value(integer only):";
 				value = ReadingValue();
-				StackPush(currentStack, value);
+				PushInStack(currentStack, value);
 				break;
 			}
 			case 2:
@@ -93,13 +93,13 @@ void StackMenu(Stack *currentStack)
 				{
 					break;
 				}
-				StackPop(currentStack);
+				PopFromStack(currentStack);
 				break;
 			}
 			case 3:
 			{
 				system("cls");
-				DeletingStack(currentStack);
+				DeleteStack(currentStack);
 				break;
 			}
 		}
@@ -111,8 +111,8 @@ void StackMenu(Stack *currentStack)
 void TwoStackQueueMenu()
 {
 	TwoStackQueue queue;
-	StackCreation(&queue.ToPush);
-	StackCreation(&queue.ToPop);
+	CreateStack(&queue.ToPush);
+	CreateStack(&queue.ToPop);
 	int menuItem;
 	int value;
 	do
@@ -152,15 +152,15 @@ void TwoStackQueueMenu()
 			}
 		}
 	} while (menuItem != EXIT_MENU_ITEM);
-	DeletingStack(&queue.ToPop);
-	DeletingStack(&queue.ToPush);
+	DeleteStack(&queue.ToPop);
+	DeleteStack(&queue.ToPush);
 	system("cls");
 }
 
 void RingBufferQueueMenu()
 {
 	RingBufferQueue userQueue;
-	RingBufferQueueCreation(&userQueue);
+	CreateRingBufferQueue(&userQueue);
 	int menuItem;
 	int value;
 	do

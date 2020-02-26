@@ -12,8 +12,8 @@ struct RingBuffer
 };
 
 //TODO: именование от глагола
-void RingBufferCreation(RingBuffer *);
-void BufferInitialisation(RingBuffer *);
-void RingBufferPut(RingBuffer *, int);
-int RingBufferGet(RingBuffer *);
-void RingBufferDeleting(RingBuffer *);
+void CreateRingBuffer(RingBuffer* buffer);
+void BufferInitialisation(RingBuffer* buffer);
+void RingBufferPut(RingBuffer* buffer, int value);
+int RingBufferGet(RingBuffer* buffer);
+void RingBufferDelete(RingBuffer* buffer);

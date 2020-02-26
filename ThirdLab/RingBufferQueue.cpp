@@ -1,17 +1,17 @@
 ﻿#include "RingBufferQueue.h"
 
 //TODO: именование входного аргумента (здесь и далее)
-void RingBufferQueueCreation(RingBufferQueue *queueParameters)
+void CreateRingBufferQueue(RingBufferQueue *queue)
 {
-	RingBufferCreation(&queueParameters->Queue);
-	queueParameters->IsFull = false;
+	RingBufferCreation(&queue->Queue);
+	queue->IsFull = false;
 }
 
-void RingQueuePut(RingBufferQueue *queueParameters, int data)
+void RingQueuePut(RingBufferQueue *queue, int value)
 {
-	if (queueParameters->IsFull)
+	if (queue->IsFull)
 	{
-		int newSize = queueParameters->Queue.BufferSize * 1.5;
+		int newSize = queue->Queue.BufferSize * 1.5;
 		RingBufferQueue newQueue;
 		int userBufferSize;
 		BufferInitialisation(&newQueue.Queue);
@@ -27,20 +27,20 @@ void RingQueuePut(RingBufferQueue *queueParameters, int data)
 			addedNode->NextBufferNode = tempNode;
 			node = addedNode;
 		}
-		while (queueParameters->Queue.OccupiedSpace != 0)
+		while (queue->Queue.OccupiedSpace != 0)
 		{
-			RingBufferPut(&newQueue.Queue, RingBufferGet(&queueParameters->Queue));
+			RingBufferPut(&newQueue.Queue, RingBufferGet(&queue->Queue));
 		}
-		queueParameters->Queue = newQueue.Queue;
+		queue->Queue = newQueue.Queue;
 	}
-	RingBufferPut(&queueParameters->Queue, data);
-	if (queueParameters->Queue.OccupiedSpace == queueParameters->Queue.BufferSize)
+	RingBufferPut(&queue->Queue, value);
+	if (queue->Queue.OccupiedSpace == queue->Queue.BufferSize)
 	{
-		queueParameters->IsFull = true;
+		queue->IsFull = true;
 	}
 	else
 	{
-		queueParameters->IsFull = false;
+		queue->IsFull = false;
 	}
 }
 

@@ -9,7 +9,7 @@ struct Stack
 };
 
 //TODO: именование не от глагола
-void StackCreation(Stack *);
-void StackPush(Stack *, int);
-void DeletingStack(Stack *);
-int StackPop(Stack *);
+void CreateStack(Stack* stack);
+void PushInStack(Stack* stack, int valueToPush);
+void DeleteStack(Stack* stack);
+int PopFromStack(Stack* stack);

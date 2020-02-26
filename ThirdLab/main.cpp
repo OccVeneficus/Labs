@@ -8,7 +8,7 @@ int main()
 {
 	Stack currentStack;
 	currentStack.Empty = true;
-	StackCreation(&currentStack);
+	CreateStack(&currentStack);
 	int menuItem;
 	do
 	{
@@ -48,6 +48,6 @@ int main()
 		}
 	} 
 	while (menuItem != EXIT_MENU_ITEM);
-	DeletingStack(&currentStack);
+	DeleteStack(&currentStack);
 	return 0;
 }

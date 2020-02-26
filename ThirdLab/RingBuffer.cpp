@@ -2,29 +2,29 @@
 #include "DataInOut.h"
 
 //TODO: именование входного аргумента (здесь и далее)
-void BufferInitialisation(RingBuffer *bufferParameters)
+void BufferInitialisation(RingBuffer *buffer)
 {
 	BufferNode *rootNode = new BufferNode;
-	bufferParameters->Head = rootNode;
-	bufferParameters->Head->NextBufferNode = bufferParameters->Head;
-	bufferParameters->IndexIn = bufferParameters->Head;
-	bufferParameters->IndexOut = bufferParameters->Head;
+	buffer->Head = rootNode;
+	buffer->Head->NextBufferNode = buffer->Head;
+	buffer->IndexIn = buffer->Head;
+	buffer->IndexOut = buffer->Head;
 }
 
-void RingBufferCreation(RingBuffer *bufferParameters)
+void CreateRingBuffer(RingBuffer *buffer)
 {
 	int userBufferSize;
-	BufferInitialisation(bufferParameters);
+	BufferInitialisation(buffer);
 	do
 	{
 		cout << endl << "Enter buffer size (only positive integer):";
 		userBufferSize = ReadingValue();
 	} 
 	while (userBufferSize <= 0);
-	bufferParameters->BufferSize = userBufferSize;
-	bufferParameters->FreeSpace = userBufferSize;
-	bufferParameters->OccupiedSpace = 0;
-	BufferNode *node = bufferParameters->Head;
+	buffer->BufferSize = userBufferSize;
+	buffer->FreeSpace = userBufferSize;
+	buffer->OccupiedSpace = 0;
+	BufferNode *node = buffer->Head;
 	for (int i = 0; i < userBufferSize - 1; i++)
 	{
 		BufferNode *addedNode = new BufferNode;
@@ -35,38 +35,38 @@ void RingBufferCreation(RingBuffer *bufferParameters)
 	}
 }
 
-void RingBufferPut(RingBuffer *bufferParameters, int value)
+void RingBufferPut(RingBuffer *buffer, int value)
 {
-	bufferParameters->IndexIn->Data = value;
-	bufferParameters->IndexIn->Useful = true;
-	bufferParameters->IndexIn = bufferParameters->IndexIn->NextBufferNode;
-	bufferParameters->FreeSpace--;
-	bufferParameters->OccupiedSpace++;
-	if (bufferParameters->OccupiedSpace > bufferParameters->BufferSize)
+	buffer->IndexIn->Data = value;
+	buffer->IndexIn->Useful = true;
+	buffer->IndexIn = buffer->IndexIn->NextBufferNode;
+	buffer->FreeSpace--;
+	buffer->OccupiedSpace++;
+	if (buffer->OccupiedSpace > buffer->BufferSize)
 	{
-		bufferParameters->FreeSpace = 0;
-		bufferParameters->OccupiedSpace = bufferParameters->BufferSize;
-		bufferParameters->IndexOut = bufferParameters->IndexOut->NextBufferNode;
+		buffer->FreeSpace = 0;
+		buffer->OccupiedSpace = buffer->BufferSize;
+		buffer->IndexOut = buffer->IndexOut->NextBufferNode;
 	}
 }
 
-int RingBufferGet(RingBuffer *bufferParameters)
+int RingBufferGet(RingBuffer *buffer)
 {
-	BufferNode *tempNode = bufferParameters->IndexOut;
-	bufferParameters->IndexOut->Useful = false;
-	bufferParameters->IndexOut = bufferParameters->IndexOut->NextBufferNode;
-	bufferParameters->FreeSpace++;
-	bufferParameters->OccupiedSpace--;
+	BufferNode *tempNode = buffer->IndexOut;
+	buffer->IndexOut->Useful = false;
+	buffer->IndexOut = buffer->IndexOut->NextBufferNode;
+	buffer->FreeSpace++;
+	buffer->OccupiedSpace--;
 	return tempNode->Data;
 }
 
-void RingBufferDeleting(RingBuffer *bufferParameters)
+void RingBufferDelete(RingBuffer *buffer)
 {
-	BufferNode *nodeToDelete = bufferParameters->Head;
-	for (int i = 0; i < bufferParameters->BufferSize; i++)
+	BufferNode *nodeToDelete = buffer->Head;
+	for (int i = 0; i < buffer->BufferSize; i++)
 	{
 		nodeToDelete = nodeToDelete->NextBufferNode;
-		delete bufferParameters->Head;
-		bufferParameters->Head = nodeToDelete;
+		delete buffer->Head;
+		buffer->Head = nodeToDelete;
 	}
 }

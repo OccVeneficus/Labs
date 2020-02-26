@@ -9,6 +9,6 @@ struct RingBufferQueue
 };
 
 //TODO: глагол в начале названия
-void RingBufferQueueCreation(RingBufferQueue *);
-void RingQueuePut(RingBufferQueue *, int data);
-int RingQueueGet(RingBufferQueue *);
+void CreateRingBufferQueue(RingBufferQueue* queue);
+void RingQueuePut(RingBufferQueue* queue, int value);
+int RingQueueGet(RingBufferQueue* queue);
