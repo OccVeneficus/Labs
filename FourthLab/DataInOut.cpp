@@ -1,5 +1,5 @@
 #include "DataInOut.h"
-bool CheckingForInteger(string value)
+bool CheckForInteger(string value)
 {
 	int size = value.length();
 	if (isdigit((unsigned char)value[0]) || (unsigned char)value[0] == '-')
@@ -18,14 +18,14 @@ bool CheckingForInteger(string value)
 	}
 }
 
-int ReadingValue()
+int ReadValue()
 {
 	string inputValue;
 	int outputValue;
 	while (true)
 	{
 		getline(cin, inputValue);
-		bool intCheckFlag = CheckingForInteger(inputValue);
+		bool intCheckFlag = CheckForInteger(inputValue);
 		istringstream inputStringStream(inputValue);
 		int number;
 		inputStringStream >> number;
@@ -42,7 +42,7 @@ int ReadingValue()
 	}
 }
 
-void DictionaryMenuTextPrinting()
+void PrintDictionaryMenuText()
 {
 	cout << endl;
 	cout << " ______________________________________________________________\n";
@@ -54,7 +54,7 @@ void DictionaryMenuTextPrinting()
 	cout << "|_____________________________________________________________|\n";
 }
 
-void HashTableMenuPrinting()
+void PrintHashTableMenu()
 {
 	cout << endl;
 	cout << " ______________________________________________________________\n";
@@ -73,38 +73,38 @@ string InputString()
 	return toRead;
 }
 
-void PrintingDeleteFail()
+void PrintDeleteFailMessage()
 {
 	cout << "Failed to delete element from table."<<
 		" Perhaps there is no such value.";
 }
 
-void PrintingAddFail()
+void PrintAddingFailMessage()
 {
 	cout << "Value already in this vocalbulary."<<
 		" You can`t add a duplicate.\n";
 	system("pause");
 }
 
-void ReadingKeyValue(string & key, string & value)
+void ReadKeyValue(string & key, string & value)
 {
-	ReadingStringKey(key);
-	ReadingStringValue(value);
+	ReadStringKey(key);
+	ReadStringValue(value);
 }
 
-void ReadingStringKey(string & key)
+void ReadStringKey(string & key)
 {
 	cout << "Key: ";
 	getline(cin, key);
 }
 
-void ReadingStringValue(string & value)
+void ReadStringValue(string & value)
 {
 	cout << "Value: ";
 	getline(cin, value);
 }
 
-void MainMenuPrinting()
+void PrintMainMenu()
 {
 	cout << endl;
 	cout << " ______________________________________________________________\n";

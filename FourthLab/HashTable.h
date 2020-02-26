@@ -4,16 +4,15 @@
 class HashTable
 {
 private:
-	//TODO: naming(done)
 	int _growthFactor;
 	int _tableSize;
 	Chain *_pairArray;
 	int _nodeCounter;
 
-	//TODO: RSDN(done)
 	bool CheckGrowthFactor();
 	void ReHash();
 	int Hash(string key); //TODO: пустую строку перед паблик
+
 public:
 	HashTable(int tableSize = 5);
 	~HashTable();

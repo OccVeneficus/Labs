@@ -12,11 +12,11 @@ void DictionaryMenu(Dictionary *userDictionary)
 		cout << "Current dictionary:\n";
 		PrintDictionary(userDictionary);
 		cout << endl;
-		DictionaryMenuTextPrinting();
+		PrintDictionaryMenuText();
 		do
 		{
 			cout << "Enter menu item from list above (integer only):";
-			menuItem = ReadingValue();
+			menuItem = ReadValue();
 			cout << endl;
 		} 
 		while (menuItem > 3 && menuItem < 0);
@@ -24,23 +24,22 @@ void DictionaryMenu(Dictionary *userDictionary)
 		{
 			case 1:
 			{
-				ReadingKeyValue(key, value);
+				ReadKeyValue(key, value);
 				userDictionary->AddKeyValuePair(key, value);
 				system("cls");
 				break;
 			}
 			case 2:
 			{
-				ReadingStringKey(key);
+				ReadStringKey(key);
 				userDictionary->DeletePairByKey(key);
-				//TODO: doubles(done)
 				system("pause");
 				break;
 			}
 			case 3:
 			{
 				Node *findedValue;
-				ReadingStringKey(key);
+				ReadStringKey(key);
 				if ((findedValue = userDictionary->SearchPairByKey(key)) == nullptr)
 				{
 					cout << "There is no " << key
@@ -70,11 +69,11 @@ void HashTableMenu(HashTable *userHashTable)
 		system("cls");
 		PrintTable(userHashTable);
 		cout << endl;
-		HashTableMenuPrinting();
+		PrintHashTableMenu();
 		do
 		{
 			cout << "Enter menu item from list above (integer only):";
-			menuItem = ReadingValue();
+			menuItem = ReadValue();
 			cout << endl;
 		}
 		while (menuItem > 3 && menuItem < 0);
@@ -82,14 +81,14 @@ void HashTableMenu(HashTable *userHashTable)
 		{
 			case 1:
 			{
-				ReadingKeyValue(key, value);
+				ReadKeyValue(key, value);
 				userHashTable->AddKeyValuePair(key, value);
 				system("cls");
 				break;
 			}
 			case 2:
 			{
-				ReadingKeyValue(key, value);
+				ReadKeyValue(key, value);
 				if (!userHashTable->DeletePairByKey(key, value))
 				{
 					cout << "There is no such value.\n";
@@ -100,7 +99,7 @@ void HashTableMenu(HashTable *userHashTable)
 			case 3:
 			{
 				Node *findedValue;
-				ReadingKeyValue(key, value);
+				ReadKeyValue(key, value);
 				if ((findedValue = userHashTable->Search(key,value)) == nullptr)
 				{
 					cout << "There is no " << key

@@ -5,7 +5,7 @@ void Dictionary::AddKeyValuePair(string key, string value)
 {
 	if (AssociativeArray.Search(key) != nullptr)
 	{
-		PrintingAddFail();
+		PrintAddingFailMessage();
 	}
 	else
 	{
@@ -17,7 +17,7 @@ void Dictionary::DeletePairByKey(string key)
 {
 	if (!AssociativeArray.DeletePairByKey(key))
 	{
-		PrintingDeleteFail();
+		PrintDeleteFailMessage();
 	}
 }
 

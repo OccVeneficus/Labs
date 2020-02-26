@@ -39,20 +39,20 @@ void Chain::AddToEnd(string key, string value)
 }
 
 //TODO: именование аргумента без существительного
-void Chain::DeleteNode(Node *toDelete)
+void Chain::DeleteNode(Node *nodeToDelete)
 {
-	if (toDelete == _head)
+	if (nodeToDelete == _head)
 	{
 		DeleteHeadNode();
 		return;
 	}
  	Node *previous = this->_head;
-	while (previous->GetNext() != toDelete)
+	while (previous->GetNext() != nodeToDelete)
 	{
 		previous = previous->GetNext();
 	}
-	previous->SetNext(toDelete->GetNext());
-	delete toDelete;
+	previous->SetNext(nodeToDelete->GetNext());
+	delete nodeToDelete;
 	_size--;
 }
 

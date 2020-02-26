@@ -16,11 +16,11 @@ int main()
 	HashTable userTable;
 	do
 	{
-		MainMenuPrinting();
+		PrintMainMenu();
 		do
 		{
 			cout << "Enter menu item from list above (integer only):";
-			menuItem = ReadingValue();
+			menuItem = ReadValue();
 			cout << endl;
 		} 
 		while (menuItem > 2 && menuItem < 0);
