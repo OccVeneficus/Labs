@@ -1,31 +1,34 @@
 ﻿#include "DynamicArray.h"
+#include <iostream>
+
+using namespace std;
 
 //TODO: именование функций от существительного, а должно быть от глагола
 //TODO: именование аргумента не соответствует объекту
-void CreatingArray(DynamicArray &arrayParameters)
+void CreateArray(DynamicArray &userArray)
 {
-	arrayParameters.Length = 8;
-	arrayParameters.Capacity = 8;
-	arrayParameters.Array = new int[arrayParameters.Capacity];
-	for (int i = 0; i < arrayParameters.Length; i++)
+	userArray.Length = 8;
+	userArray.Capacity = 8;
+	userArray.Array = new int[userArray.Capacity];
+	for (int i = 0; i < userArray.Length; i++)
 	{
-		arrayParameters.Array[i] = rand() % 10;
+		userArray.Array[i] = rand() % 10;
 	}
 }
 
 //TODO: именование функций от существительного, а должно быть от глагола
 //TODO: именование аргумента не соответствует объекту
-void PrintingArray(DynamicArray &arrayParameters)
+void PrintArray(DynamicArray &userArray)
 {
 	cout << "Current array: ";
-	for (int i = 0; i < arrayParameters.Length; i++)
+	for (int i = 0; i < userArray.Length; i++)
 	{
-		cout << " " << arrayParameters.Array[i] << " ";
+		cout << " " << userArray.Array[i] << " ";
 	}
 	cout << "\n";
 }
 
-void PrintingMenuText()
+void PrintMenuText()
 {
 	cout << " ______________________________________________________________\n";
 	cout << "|                       ||||||MENU||||||                      |\n";
@@ -44,53 +47,53 @@ void PrintingMenuText()
 
 //TODO: именование функций от существительного, а должно быть от глагола
 //TODO: именование аргумента не соответствует объекту
-void DeletingElement(DynamicArray &arrayParameters)
+void DeleteElement(DynamicArray &userArray)
 {
-	PrintingArray(arrayParameters);
+	PrintArray(userArray);
 	cout << "\n";
 	int indexToDelete;
 	do
 	{
 		cout << "Enter index of element you want to delete: ";
-		indexToDelete = ReadingValue();
-	} while (indexToDelete < 0 || indexToDelete >= arrayParameters.Length);
-	for (int i = indexToDelete; i < arrayParameters.Length; i++)
+		indexToDelete = ReadValue();
+	} while (indexToDelete < 0 || indexToDelete >= userArray.Length);
+	for (int i = indexToDelete; i < userArray.Length; i++)
 	{
-		arrayParameters.Array[i] = arrayParameters.Array[i + 1];
+		userArray.Array[i] = userArray.Array[i + 1];
 	}
-	--arrayParameters.Length;
+	--userArray.Length;
 }
 
 //TODO: именование функций от существительного, а должно быть от глагола
 //TODO: именование аргумента не соответствует объекту
-void AddingAfterIndex(DynamicArray &arrayParameters, int index) 
+void AddAfterIndex(DynamicArray &userArray, int index) 
 {
-	PrintingArray(arrayParameters);
-	if (arrayParameters.Length == arrayParameters.Capacity)
+	PrintArray(userArray);
+	if (userArray.Length == userArray.Capacity)
 	{
-		RecreatingArray(arrayParameters);
+		RecreateArray(userArray);
 	}
 	cout << "\n";
 	cout << "Enter value you want to add to array: ";
-	int value = ReadingValue();
-	for (int i = arrayParameters.Length - 1; i >= index; i--)
+	int value = ReadValue();
+	for (int i = userArray.Length - 1; i >= index; i--)
 	{
-		arrayParameters.Array[i + 1] = arrayParameters.Array[i];
+		userArray.Array[i + 1] = userArray.Array[i];
 	}
-	arrayParameters.Array[index] = value;
-	++arrayParameters.Length;
+	userArray.Array[index] = value;
+	++userArray.Length;
 }
 
 //TODO: именование функций от существительного, а должно быть от глагола
 //TODO: именование аргумента не соответствует объекту
-void SortingArray(DynamicArray &arrayParameters)
+void SortArray(DynamicArray &userArray)
 {
-	for (int i = 1; i < arrayParameters.Length; i++)
+	for (int i = 1; i < userArray.Length; i++)
 	{
-		for (int j = i; j > 0 && arrayParameters.Array[j - 1] >
-			arrayParameters.Array[j]; j--)
+		for (int j = i; j > 0 && userArray.Array[j - 1] >
+			userArray.Array[j]; j--)
 		{
-			swap(arrayParameters.Array[j - 1], arrayParameters.Array[j]);
+			swap(userArray.Array[j - 1], userArray.Array[j]);
 		}
 	}
 	cout << "\n";
@@ -99,16 +102,16 @@ void SortingArray(DynamicArray &arrayParameters)
 
 //TODO: именование функций от существительного, а должно быть от глагола
 //TODO: именование аргумента не соответствует объекту
-void LinearSearching(DynamicArray &arrayParameters)
+void LinearSearch(DynamicArray &userArray)
 {
-	PrintingArray(arrayParameters);
+	PrintArray(userArray);
 	cout << "\n";
 	cout << "Enter value you want to find: ";
-	int valueToSearch = ReadingValue();
+	int valueToSearch = ReadValue();
 	int index = -1;
-	for (int i = 0; i < arrayParameters.Length; i++)
+	for (int i = 0; i < userArray.Length; i++)
 	{
-		if (arrayParameters.Array[i] == valueToSearch)
+		if (userArray.Array[i] == valueToSearch)
 		{
 			index = i;
 		}
@@ -134,27 +137,27 @@ void LinearSearching(DynamicArray &arrayParameters)
 
 //TODO: именование функций от существительного, а должно быть от глагола
 //TODO: именование аргумента не соответствует объекту
-void BinarSearching(DynamicArray &arrayParameters)
+void BinarSearch(DynamicArray &userArray)
 {
-	SortingArray(arrayParameters);
-	PrintingArray(arrayParameters);
+	SortArray(userArray);
+	PrintArray(userArray);
 	cout << "\n";
 	cout << "What value you want to find: ";
-	int valueToSearch = ReadingValue();
+	int valueToSearch = ReadValue();
 	int leftEnd = 0;
-	int rightEnd = arrayParameters.Length;
+	int rightEnd = userArray.Length;
 	int middleOfArray;
 	bool flag = false;
 	//TODO: используй '!' вместо сравнения с false
-	while (flag == false && leftEnd <= rightEnd)
+	while (!flag && leftEnd <= rightEnd)
 	{
 		middleOfArray = (leftEnd + rightEnd) / 2;
 
-		if (arrayParameters.Array[middleOfArray] == valueToSearch)
+		if (userArray.Array[middleOfArray] == valueToSearch)
 		{
 			flag = true;
 		}
-		if (arrayParameters.Array[middleOfArray] > valueToSearch)
+		if (userArray.Array[middleOfArray] > valueToSearch)
 		{
 			rightEnd = middleOfArray - 1;
 		}
@@ -185,27 +188,27 @@ void BinarSearching(DynamicArray &arrayParameters)
 //TODO: именование функций от существительного, а должно быть от глагола
 //TODO: метод Delete и Create антагоничны по действию. Предпочтительно, чтобы
 //антагоничные функции принимали одинаковые аргументы
-void DeletingArray(int *currentArray) 
+void DeleteArray(int *userArray) 
 {
-	delete[] currentArray;
+	delete[] userArray;
 }
 
 //TODO: именование функций от существительного, а должно быть от глагола
 //TODO: именование аргумента не соответствует объекту
-void RecreatingArray(DynamicArray &arrayParameters)
+void RecreateArray(DynamicArray &userArray)
 {
 	const int buffer = 8;
-	int *newArray = new int[arrayParameters.Capacity + buffer];
-	for (int i = 0; i < arrayParameters.Length; i++)
+	int *newArray = new int[userArray.Capacity + buffer];
+	for (int i = 0; i < userArray.Length; i++)
 	{
-		newArray[i] = arrayParameters.Array[i];
+		newArray[i] = userArray.Array[i];
 	}
-	DeletingArray(arrayParameters.Array);
-	arrayParameters.Array = newArray;
+	DeleteArray(userArray.Array);
+	userArray.Array = newArray;
 }
 
 //TODO: именование функций от существительного, а должно быть от глагола
-int ReadingValue()
+int ReadValue()
 {
 	int taxableIncome;
 	while(true) 

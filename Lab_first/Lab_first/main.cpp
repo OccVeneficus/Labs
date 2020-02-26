@@ -7,18 +7,18 @@ int main()
 	srand(time(NULL));
 	int index;
 	DynamicArray arrayParameters;
-	CreatingArray(arrayParameters);
+	CreateArray(arrayParameters);
 	cout << "\n";
 	int menuItem;
 	do 
 	{
-		PrintingArray(arrayParameters);
+		PrintArray(arrayParameters);
 		cout << endl;
-		PrintingMenuText();
+		PrintMenuText();
 		do
 		{
 			cout << "Enter menu item(you can only use numbers from 1 to 8): ";
-			menuItem = ReadingValue();
+			menuItem = ReadValue();
 		} 
 		while (menuItem > 8 || menuItem <= 0);
 		switch (menuItem)
@@ -26,19 +26,19 @@ int main()
 		case 1:
 			{
 			system("cls");
-			DeletingElement(arrayParameters);
+			DeleteElement(arrayParameters);
 			break;
 			}
 		case 2:
 			{
 			system("cls");
-			AddingAfterIndex(arrayParameters, 0);
+			AddAfterIndex(arrayParameters, 0);
 			break;
 			}
 		case 3:
 			{
 			system("cls");
-			AddingAfterIndex(arrayParameters, arrayParameters.Length);
+			AddAfterIndex(arrayParameters, arrayParameters.Length);
 			break;
 			}
 		case 4:
@@ -47,34 +47,34 @@ int main()
 			do
 			{
 				//TODO: а теперь загугли перевод слова witch
-				cout << "Enter index of element after witch";
+				cout << "Enter index of element after wich";
 				cout << "you want to put new element: ";
-				index = ReadingValue() + 1;
+				index = ReadValue() + 1;
 			} while (index < 0 || index >= arrayParameters.Length);
-			AddingAfterIndex(arrayParameters, index);
+			AddAfterIndex(arrayParameters, index);
 			break;
 			}
 		case 5:
 			{
 			system("cls");
-			SortingArray(arrayParameters);
+			SortArray(arrayParameters);
 			break;
 			}
 		case 6:
 			{
 			system("cls");
-			LinearSearching(arrayParameters);
+			LinearSearch(arrayParameters);
 			break;
 		}
 		case 7:
 			{
 			system("cls");
-			BinarSearching(arrayParameters);
+			BinarSearch(arrayParameters);
 			break;
 			}
 		}
 	} while (menuItem != 8);
-	DeletingArray(arrayParameters.Array);
+	DeleteArray(arrayParameters.Array);
 	cout << "Ending session...";
 	return 0;
 }
