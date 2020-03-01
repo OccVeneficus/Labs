@@ -40,6 +40,13 @@
     <ClCompile Include="..\Lab_second\Lab_2.cpp" />
     <ClCompile Include="..\Lab_second\UserInputOutput.cpp" />
     <ClCompile Include="..\Lab_second\UserInterface.cpp" />
+    <ClCompile Include="..\SixLab\AVLNode.cpp" />
+    <ClCompile Include="..\SixLab\AVLTree.cpp" />
+    <ClCompile Include="..\SixLab\DataInOut.cpp" />
+    <ClCompile Include="..\SixLab\Lab_6.cpp" />
+    <ClCompile Include="..\SixLab\Menus.cpp" />
+    <ClCompile Include="..\SixLab\RedBlackNode.cpp" />
+    <ClCompile Include="..\SixLab\RedBlackTree.cpp" />
     <ClCompile Include="..\ThirdLab\DataInOutLab3.cpp" />
     <ClCompile Include="..\ThirdLab\Lab_3.cpp" />
     <ClCompile Include="..\ThirdLab\MenusLab3.cpp" />
@@ -49,6 +56,7 @@
     <ClCompile Include="..\ThirdLab\TwoStackQueue.cpp" />
     <ClCompile Include="Lab_1.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainMenu.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Common\Consts.h" />
@@ -70,6 +78,12 @@
     <ClInclude Include="..\Lab_second\LinkedList.h" />
     <ClInclude Include="..\Lab_second\UserInputOutput.h" />
     <ClInclude Include="..\Lab_second\UserInterface.h" />
+    <ClInclude Include="..\SixLab\AVLNode.h" />
+    <ClInclude Include="..\SixLab\AVLTree.h" />
+    <ClInclude Include="..\SixLab\DataInOut.h" />
+    <ClInclude Include="..\SixLab\Menus.h" />
+    <ClInclude Include="..\SixLab\RedBlackNode.h" />
+    <ClInclude Include="..\SixLab\RedBlackTree.h" />
     <ClInclude Include="..\ThirdLab\BufferNode.h" />
     <ClInclude Include="..\ThirdLab\DataInOutLab3.h" />
     <ClInclude Include="..\ThirdLab\MenusLab3.h" />
@@ -81,6 +95,8 @@
     <ClInclude Include="Lab_2.h" />
     <ClInclude Include="Lab_3.h" />
     <ClInclude Include="Lab_5.h" />
+    <ClInclude Include="Lab_6.h" />
+    <ClInclude Include="MainMenu.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

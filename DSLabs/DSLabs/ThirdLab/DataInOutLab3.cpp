@@ -2,7 +2,7 @@
 #include "Stack.h"
 #include "RingBuffer.h"
 
-void MainMenuPrinting()
+void PrintMainMenuLab3()
 {
 	cout << endl;
 	cout << " ______________________________________________________________\n";

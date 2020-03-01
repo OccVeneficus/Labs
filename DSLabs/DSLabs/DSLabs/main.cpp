@@ -5,6 +5,8 @@
 #include "Lab_3.h"
 #include "Lab_4.h"
 #include "Lab_5.h"
+#include "Lab_6.h"
+#include "MainMenu.h"
 #include <iostream>
 
 using namespace std;
@@ -12,15 +14,19 @@ using namespace std;
 int main()
 {
 	int menuItem;
-	system("cls");
 	do
 	{
+		system("cls");
+		PrintMainMenuForAll();
+		cout << endl;
 		do
 		{
 			cout << "Enter menu item from list above (integer only):";
 			menuItem = ReadValue();
 			cout << endl;
-		} while (menuItem > 6 && menuItem < 0);
+		} 
+		while (menuItem > 6 && menuItem < 0);
+		system("cls");
 		switch (menuItem)
 		{
 			case 1:
@@ -46,6 +52,11 @@ int main()
 			case 5:
 			{
 				Lab_5();
+				break;
+			}
+			case 6:
+			{
+				Lab_6();
 				break;
 			}
 		}

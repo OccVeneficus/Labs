@@ -144,6 +144,30 @@
     <ClInclude Include="..\FourthLab\NodeLab4.h">
       <Filter>Header Files\Lab_4</Filter>
     </ClInclude>
+    <ClInclude Include="..\SixLab\AVLNode.h">
+      <Filter>Header Files\Lab_6</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SixLab\AVLTree.h">
+      <Filter>Header Files\Lab_6</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SixLab\DataInOut.h">
+      <Filter>Header Files\Lab_6</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SixLab\Menus.h">
+      <Filter>Header Files\Lab_6</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SixLab\RedBlackNode.h">
+      <Filter>Header Files\Lab_6</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SixLab\RedBlackTree.h">
+      <Filter>Header Files\Lab_6</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab_6.h">
+      <Filter>Source Files\Lab_6</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Lab_first\DynamicArray.cpp">
@@ -235,6 +259,30 @@
     </ClCompile>
     <ClCompile Include="..\FifthLab\NodeLab5.cpp">
       <Filter>Source Files\Lab_5</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SixLab\AVLNode.cpp">
+      <Filter>Source Files\Lab_6</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SixLab\AVLTree.cpp">
+      <Filter>Source Files\Lab_6</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SixLab\DataInOut.cpp">
+      <Filter>Source Files\Lab_6</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SixLab\Menus.cpp">
+      <Filter>Source Files\Lab_6</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SixLab\RedBlackNode.cpp">
+      <Filter>Source Files\Lab_6</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SixLab\RedBlackTree.cpp">
+      <Filter>Source Files\Lab_6</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SixLab\Lab_6.cpp">
+      <Filter>Source Files\Lab_6</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenu.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

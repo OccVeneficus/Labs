@@ -14,7 +14,7 @@ void Lab_3()
 	int menuItem;
 	do
 	{
-		MainMenuPrinting();
+		PrintMainMenuLab3();
 		do
 		{
 			cout << ">";

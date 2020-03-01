@@ -7,7 +7,7 @@ const int EXIT_MENU_ITEM = 0;
 const int BUFFER = 8;
 
 using namespace std;
-void MainMenuPrinting();
+void PrintMainMenuLab3();
 void StackMenuPrinting();
 void StackPrinting(Stack *);
 void BufferMenuPrinting();
