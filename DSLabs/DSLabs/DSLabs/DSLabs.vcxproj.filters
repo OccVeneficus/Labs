@@ -46,6 +46,12 @@
     <Filter Include="Source Files\Lab_5">
       <UniqueIdentifier>{5e67f116-e447-49f7-9e36-4179935584e2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Lab_6">
+      <UniqueIdentifier>{a7300ee1-8300-43ef-85f1-3dcf760d3bc5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Lab_6">
+      <UniqueIdentifier>{2a64a72c-6684-4871-91c0-9d4d5d6db5d4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Lab_first\DynamicArray.h">
