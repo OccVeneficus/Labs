@@ -20,6 +20,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Common\IntegerReading.cpp" />
+    <ClCompile Include="..\FourthLab\Chain.cpp" />
+    <ClCompile Include="..\FourthLab\ClassesOutput.cpp" />
+    <ClCompile Include="..\FourthLab\DataInOutLab4.cpp" />
+    <ClCompile Include="..\FourthLab\HashTable.cpp" />
+    <ClCompile Include="..\FourthLab\Lab_4.cpp" />
+    <ClCompile Include="..\FourthLab\MenusLab4.cpp" />
+    <ClCompile Include="..\FourthLab\Node.cpp" />
+    <ClCompile Include="..\FourthLab\Vocabulary.cpp" />
     <ClCompile Include="..\Lab_first\DynamicArray.cpp" />
     <ClCompile Include="..\Lab_second\LinkedList.cpp" />
     <ClCompile Include="..\Lab_second\Lab_2.cpp" />
@@ -27,7 +35,7 @@
     <ClCompile Include="..\Lab_second\UserInterface.cpp" />
     <ClCompile Include="..\ThirdLab\DataInOutLab3.cpp" />
     <ClCompile Include="..\ThirdLab\Lab_3.cpp" />
-    <ClCompile Include="..\ThirdLab\Menus.cpp" />
+    <ClCompile Include="..\ThirdLab\MenusLab3.cpp" />
     <ClCompile Include="..\ThirdLab\RingBuffer.cpp" />
     <ClCompile Include="..\ThirdLab\RingBufferQueue.cpp" />
     <ClCompile Include="..\ThirdLab\Stack.cpp" />
@@ -38,13 +46,20 @@
   <ItemGroup>
     <ClInclude Include="..\Common\Consts.h" />
     <ClInclude Include="..\Common\IntegerReading.h" />
+    <ClInclude Include="..\FourthLab\Chain.h" />
+    <ClInclude Include="..\FourthLab\ClassesOutput.h" />
+    <ClInclude Include="..\FourthLab\DataInOutLab4.h" />
+    <ClInclude Include="..\FourthLab\HashTable.h" />
+    <ClInclude Include="..\FourthLab\MenusLab4.h" />
+    <ClInclude Include="..\FourthLab\Node.h" />
+    <ClInclude Include="..\FourthLab\Vocabulary.h" />
     <ClInclude Include="..\Lab_first\DynamicArray.h" />
     <ClInclude Include="..\Lab_second\LinkedList.h" />
     <ClInclude Include="..\Lab_second\UserInputOutput.h" />
     <ClInclude Include="..\Lab_second\UserInterface.h" />
     <ClInclude Include="..\ThirdLab\BufferNode.h" />
     <ClInclude Include="..\ThirdLab\DataInOutLab3.h" />
-    <ClInclude Include="..\ThirdLab\Menus.h" />
+    <ClInclude Include="..\ThirdLab\MenusLab3.h" />
     <ClInclude Include="..\ThirdLab\RingBuffer.h" />
     <ClInclude Include="..\ThirdLab\RingBufferQueue.h" />
     <ClInclude Include="..\ThirdLab\Stack.h" />

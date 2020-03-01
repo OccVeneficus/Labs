@@ -69,9 +69,6 @@
     <ClInclude Include="..\ThirdLab\BufferNode.h">
       <Filter>Header Files\Lab_3</Filter>
     </ClInclude>
-    <ClInclude Include="..\ThirdLab\Menus.h">
-      <Filter>Header Files\Lab_3</Filter>
-    </ClInclude>
     <ClInclude Include="..\ThirdLab\RingBuffer.h">
       <Filter>Header Files\Lab_3</Filter>
     </ClInclude>
@@ -89,6 +86,30 @@
     </ClInclude>
     <ClInclude Include="..\ThirdLab\DataInOutLab3.h">
       <Filter>Header Files\Lab_3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FourthLab\Chain.h">
+      <Filter>Header Files\Lab_4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FourthLab\ClassesOutput.h">
+      <Filter>Header Files\Lab_4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FourthLab\DataInOutLab4.h">
+      <Filter>Header Files\Lab_4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FourthLab\HashTable.h">
+      <Filter>Header Files\Lab_4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FourthLab\Node.h">
+      <Filter>Header Files\Lab_4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FourthLab\Vocabulary.h">
+      <Filter>Header Files\Lab_4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdLab\MenusLab3.h">
+      <Filter>Header Files\Lab_3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FourthLab\MenusLab4.h">
+      <Filter>Header Files\Lab_4</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -116,9 +137,6 @@
     <ClCompile Include="..\Lab_second\Lab_2.cpp">
       <Filter>Source Files\Lab_2</Filter>
     </ClCompile>
-    <ClCompile Include="..\ThirdLab\Menus.cpp">
-      <Filter>Source Files\Lab_3</Filter>
-    </ClCompile>
     <ClCompile Include="..\ThirdLab\RingBuffer.cpp">
       <Filter>Source Files\Lab_3</Filter>
     </ClCompile>
@@ -136,6 +154,33 @@
     </ClCompile>
     <ClCompile Include="..\ThirdLab\DataInOutLab3.cpp">
       <Filter>Source Files\Lab_3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FourthLab\Chain.cpp">
+      <Filter>Source Files\Lab_4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FourthLab\ClassesOutput.cpp">
+      <Filter>Source Files\Lab_4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FourthLab\DataInOutLab4.cpp">
+      <Filter>Source Files\Lab_4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FourthLab\HashTable.cpp">
+      <Filter>Source Files\Lab_4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FourthLab\Node.cpp">
+      <Filter>Source Files\Lab_4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FourthLab\Vocabulary.cpp">
+      <Filter>Source Files\Lab_4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FourthLab\Lab_4.cpp">
+      <Filter>Source Files\Lab_4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ThirdLab\MenusLab3.cpp">
+      <Filter>Source Files\Lab_3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FourthLab\MenusLab4.cpp">
+      <Filter>Source Files\Lab_4</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

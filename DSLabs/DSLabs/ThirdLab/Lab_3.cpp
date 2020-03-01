@@ -2,7 +2,7 @@
 #include "Stack.h"
 #include "RingBuffer.h"
 #include "TwoStackQueue.h"
-#include "Menus.h"
+#include "MenusLab3.h"
 #include "../Common/Consts.h"
 #include "../Common/IntegerReading.h"
 
