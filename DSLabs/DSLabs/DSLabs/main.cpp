@@ -4,6 +4,7 @@
 #include "Lab_2.h"
 #include "Lab_3.h"
 #include "Lab_4.h"
+#include "Lab_5.h"
 #include <iostream>
 
 using namespace std;
@@ -40,6 +41,11 @@ int main()
 			case 4:
 			{
 				Lab_4();
+				break;
+			}
+			case 5:
+			{
+				Lab_5();
 				break;
 			}
 		}

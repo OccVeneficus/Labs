@@ -20,13 +20,20 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Common\IntegerReading.cpp" />
+    <ClCompile Include="..\FifthLab\BinaryTree.cpp" />
+    <ClCompile Include="..\FifthLab\DataInOutLab5.cpp" />
+    <ClCompile Include="..\FifthLab\Lab_5.cpp" />
+    <ClCompile Include="..\FifthLab\MenusLab5.cpp" />
+    <ClCompile Include="..\FifthLab\NodeLab5.cpp" />
+    <ClCompile Include="..\FifthLab\Treap.cpp" />
+    <ClCompile Include="..\FifthLab\TreapNode.cpp" />
     <ClCompile Include="..\FourthLab\Chain.cpp" />
     <ClCompile Include="..\FourthLab\ClassesOutput.cpp" />
     <ClCompile Include="..\FourthLab\DataInOutLab4.cpp" />
     <ClCompile Include="..\FourthLab\HashTable.cpp" />
     <ClCompile Include="..\FourthLab\Lab_4.cpp" />
     <ClCompile Include="..\FourthLab\MenusLab4.cpp" />
-    <ClCompile Include="..\FourthLab\Node.cpp" />
+    <ClCompile Include="..\FourthLab\NodeLab4.cpp" />
     <ClCompile Include="..\FourthLab\Vocabulary.cpp" />
     <ClCompile Include="..\Lab_first\DynamicArray.cpp" />
     <ClCompile Include="..\Lab_second\LinkedList.cpp" />
@@ -46,12 +53,18 @@
   <ItemGroup>
     <ClInclude Include="..\Common\Consts.h" />
     <ClInclude Include="..\Common\IntegerReading.h" />
+    <ClInclude Include="..\FifthLab\BinaryTree.h" />
+    <ClInclude Include="..\FifthLab\DataInOutLab5.h" />
+    <ClInclude Include="..\FifthLab\MenusLab5.h" />
+    <ClInclude Include="..\FifthLab\NodeLab5.h" />
+    <ClInclude Include="..\FifthLab\Treap.h" />
+    <ClInclude Include="..\FifthLab\TreapNode.h" />
     <ClInclude Include="..\FourthLab\Chain.h" />
     <ClInclude Include="..\FourthLab\ClassesOutput.h" />
     <ClInclude Include="..\FourthLab\DataInOutLab4.h" />
     <ClInclude Include="..\FourthLab\HashTable.h" />
     <ClInclude Include="..\FourthLab\MenusLab4.h" />
-    <ClInclude Include="..\FourthLab\Node.h" />
+    <ClInclude Include="..\FourthLab\NodeLab4.h" />
     <ClInclude Include="..\FourthLab\Vocabulary.h" />
     <ClInclude Include="..\Lab_first\DynamicArray.h" />
     <ClInclude Include="..\Lab_second\LinkedList.h" />
@@ -67,6 +80,7 @@
     <ClInclude Include="Lab_1.h" />
     <ClInclude Include="Lab_2.h" />
     <ClInclude Include="Lab_3.h" />
+    <ClInclude Include="Lab_5.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

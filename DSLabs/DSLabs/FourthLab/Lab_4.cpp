@@ -1,7 +1,7 @@
 #include "DataInOutLab4.h"
 #include "ClassesOutput.h"
 #include "Chain.h"
-#include "Node.h"
+#include "NodeLab4.h"
 #include "HashTable.h"
 #include "Vocabulary.h"
 #include "MenusLab4.h"
@@ -16,7 +16,7 @@ void Lab_4()
 	HashTable userTable;
 	do
 	{
-		PrintMainMenu();
+		PrintMainMenuLab4();
 		do
 		{
 			cout << "Enter menu item from list above (integer only):";

@@ -40,6 +40,12 @@
     <Filter Include="Source Files\Lab_4">
       <UniqueIdentifier>{d5085362-ba49-4d8a-b353-503f1dc8dfa4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Lab_5">
+      <UniqueIdentifier>{e9a89aa8-d0b5-4b5b-b044-e8ccc1b6fbf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Lab_5">
+      <UniqueIdentifier>{5e67f116-e447-49f7-9e36-4179935584e2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Lab_first\DynamicArray.h">
@@ -99,9 +105,6 @@
     <ClInclude Include="..\FourthLab\HashTable.h">
       <Filter>Header Files\Lab_4</Filter>
     </ClInclude>
-    <ClInclude Include="..\FourthLab\Node.h">
-      <Filter>Header Files\Lab_4</Filter>
-    </ClInclude>
     <ClInclude Include="..\FourthLab\Vocabulary.h">
       <Filter>Header Files\Lab_4</Filter>
     </ClInclude>
@@ -109,6 +112,30 @@
       <Filter>Header Files\Lab_3</Filter>
     </ClInclude>
     <ClInclude Include="..\FourthLab\MenusLab4.h">
+      <Filter>Header Files\Lab_4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FifthLab\BinaryTree.h">
+      <Filter>Header Files\Lab_5</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FifthLab\Treap.h">
+      <Filter>Header Files\Lab_5</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FifthLab\TreapNode.h">
+      <Filter>Header Files\Lab_5</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FifthLab\DataInOutLab5.h">
+      <Filter>Header Files\Lab_5</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FifthLab\MenusLab5.h">
+      <Filter>Header Files\Lab_5</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab_5.h">
+      <Filter>Source Files\Lab_5</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FifthLab\NodeLab5.h">
+      <Filter>Header Files\Lab_5</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FourthLab\NodeLab4.h">
       <Filter>Header Files\Lab_4</Filter>
     </ClInclude>
   </ItemGroup>
@@ -167,9 +194,6 @@
     <ClCompile Include="..\FourthLab\HashTable.cpp">
       <Filter>Source Files\Lab_4</Filter>
     </ClCompile>
-    <ClCompile Include="..\FourthLab\Node.cpp">
-      <Filter>Source Files\Lab_4</Filter>
-    </ClCompile>
     <ClCompile Include="..\FourthLab\Vocabulary.cpp">
       <Filter>Source Files\Lab_4</Filter>
     </ClCompile>
@@ -181,6 +205,30 @@
     </ClCompile>
     <ClCompile Include="..\FourthLab\MenusLab4.cpp">
       <Filter>Source Files\Lab_4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FifthLab\BinaryTree.cpp">
+      <Filter>Source Files\Lab_5</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FifthLab\Treap.cpp">
+      <Filter>Source Files\Lab_5</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FifthLab\TreapNode.cpp">
+      <Filter>Source Files\Lab_5</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FifthLab\DataInOutLab5.cpp">
+      <Filter>Source Files\Lab_5</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FifthLab\MenusLab5.cpp">
+      <Filter>Source Files\Lab_5</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FifthLab\Lab_5.cpp">
+      <Filter>Source Files\Lab_5</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FourthLab\NodeLab4.cpp">
+      <Filter>Source Files\Lab_4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FifthLab\NodeLab5.cpp">
+      <Filter>Source Files\Lab_5</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

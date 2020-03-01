@@ -1,5 +1,5 @@
 ﻿#pragma once
-#include "Node.h"
+#include "NodeLab4.h"
 class Chain
 {
 private:

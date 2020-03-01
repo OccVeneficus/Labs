@@ -2,7 +2,7 @@
 #include <string>
 #include <iostream>
 #include <sstream>
-#include "Node.h"
+#include "NodeLab4.h"
 #include "Chain.h"
 #include "HashTable.h"
 #include "Vocabulary.h"

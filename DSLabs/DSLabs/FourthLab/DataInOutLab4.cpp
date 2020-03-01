@@ -62,7 +62,7 @@ void ReadStringValue(string & value)
 	getline(cin, value);
 }
 
-void PrintMainMenu()
+void PrintMainMenuLab4()
 {
 	cout << endl;
 	cout << " ______________________________________________________________\n";

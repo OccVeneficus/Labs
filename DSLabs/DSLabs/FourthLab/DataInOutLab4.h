@@ -22,4 +22,4 @@ void PrintAddingFailMessage();
 void ReadKeyValue(string &key, string &value);
 void ReadStringKey(string &key);
 void ReadStringValue(string &value);
-void PrintMainMenu();
+void PrintMainMenuLab4();
