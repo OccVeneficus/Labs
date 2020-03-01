@@ -25,6 +25,13 @@
     <ClCompile Include="..\Lab_second\Lab_2.cpp" />
     <ClCompile Include="..\Lab_second\UserInputOutput.cpp" />
     <ClCompile Include="..\Lab_second\UserInterface.cpp" />
+    <ClCompile Include="..\ThirdLab\DataInOutLab3.cpp" />
+    <ClCompile Include="..\ThirdLab\Lab_3.cpp" />
+    <ClCompile Include="..\ThirdLab\Menus.cpp" />
+    <ClCompile Include="..\ThirdLab\RingBuffer.cpp" />
+    <ClCompile Include="..\ThirdLab\RingBufferQueue.cpp" />
+    <ClCompile Include="..\ThirdLab\Stack.cpp" />
+    <ClCompile Include="..\ThirdLab\TwoStackQueue.cpp" />
     <ClCompile Include="Lab_1.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -35,8 +42,16 @@
     <ClInclude Include="..\Lab_second\LinkedList.h" />
     <ClInclude Include="..\Lab_second\UserInputOutput.h" />
     <ClInclude Include="..\Lab_second\UserInterface.h" />
+    <ClInclude Include="..\ThirdLab\BufferNode.h" />
+    <ClInclude Include="..\ThirdLab\DataInOutLab3.h" />
+    <ClInclude Include="..\ThirdLab\Menus.h" />
+    <ClInclude Include="..\ThirdLab\RingBuffer.h" />
+    <ClInclude Include="..\ThirdLab\RingBufferQueue.h" />
+    <ClInclude Include="..\ThirdLab\Stack.h" />
+    <ClInclude Include="..\ThirdLab\TwoStackQueue.h" />
     <ClInclude Include="Lab_1.h" />
     <ClInclude Include="Lab_2.h" />
+    <ClInclude Include="Lab_3.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

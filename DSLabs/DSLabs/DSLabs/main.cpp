@@ -32,6 +32,11 @@ int main()
 				Lab_2();
 				break;
 			}
+			case 3:
+			{
+				Lab_3();
+				break;
+			}
 		}
 	} 
 	while (menuItem != EXIT_MENU_ITEM_MAIN);
