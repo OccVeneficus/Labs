@@ -2,6 +2,8 @@
 #include "../Common/IntegerReading.h"
 #include "Lab_1.h"
 #include "Lab_2.h"
+#include "Lab_3.h"
+#include "Lab_4.h"
 #include <iostream>
 
 using namespace std;
