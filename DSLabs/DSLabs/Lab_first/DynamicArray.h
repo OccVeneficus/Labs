@@ -23,4 +23,3 @@ void SortArray(DynamicArray& userArray);
 void LinearSearch(DynamicArray& userArray);
 void BinarSearch(DynamicArray& userArray);
 void RecreateArray(DynamicArray& userArray);
-int ReadValue();

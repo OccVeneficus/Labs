@@ -1,10 +1,15 @@
-﻿#include "DynamicArray.h"
+﻿#include "../Common/Consts.h"
+#include "../Common/IntegerReading.h"
+#include "../Lab_first/DynamicArray.h"
 #include <cstdlib>
 #include <ctime>
+#include <iostream>
 
-int main()
+using namespace std;
+
+void Lab_1()
 {
-	srand(time(NULL));
+	srand(time(nullptr));
 	int index;
 	DynamicArray arrayParameters;
 	CreateArray(arrayParameters);
@@ -73,8 +78,8 @@ int main()
 			break;
 			}
 		}
-	} while (menuItem != 8);
+	} 
+	while (menuItem != EXIT_MENU_ITEM_LAB1);
 	DeleteArray(arrayParameters.Array);
 	cout << "Ending session...";
-	return 0;
 }

@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Lab_1">
+      <UniqueIdentifier>{ae83089d-f7d2-472f-9609-e3359db311ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Lab_1">
+      <UniqueIdentifier>{6fbfb087-08c1-4935-8936-8d43c63e8d9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Common">
+      <UniqueIdentifier>{e8330c7d-48ac-4454-b393-edf1829f3a55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Lab_2">
+      <UniqueIdentifier>{67959da8-4db3-456f-ae7b-385410b33ac1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Lab_2">
+      <UniqueIdentifier>{3796c666-b955-43c6-bf49-45d0217a3207}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Lab_first\DynamicArray.h">
+      <Filter>Header Files\Lab_1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Consts.h">
+      <Filter>Resource Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\IntegerReading.h">
+      <Filter>Resource Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab_1.h">
+      <Filter>Source Files\Lab_1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lab_second\LinkedList.h">
+      <Filter>Header Files\Lab_2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lab_second\UserInputOutput.h">
+      <Filter>Header Files\Lab_2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lab_second\UserInterface.h">
+      <Filter>Header Files\Lab_2</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab_2.h">
+      <Filter>Source Files\Lab_2</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Lab_first\DynamicArray.cpp">
+      <Filter>Source Files\Lab_1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\IntegerReading.cpp">
+      <Filter>Resource Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab_1.cpp">
+      <Filter>Source Files\Lab_1</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lab_second\LinkedList.cpp">
+      <Filter>Source Files\Lab_2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lab_second\UserInputOutput.cpp">
+      <Filter>Source Files\Lab_2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lab_second\UserInterface.cpp">
+      <Filter>Source Files\Lab_2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lab_second\Lab_2.cpp">
+      <Filter>Source Files\Lab_2</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

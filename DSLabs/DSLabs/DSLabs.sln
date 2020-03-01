@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DSLabs", "DSLabs\DSLabs.vcxproj", "{12858E46-EA87-45B6-9BCA-7C1EBB7C8BCA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12858E46-EA87-45B6-9BCA-7C1EBB7C8BCA}.Debug|x64.ActiveCfg = Debug|x64
+		{12858E46-EA87-45B6-9BCA-7C1EBB7C8BCA}.Debug|x64.Build.0 = Debug|x64
+		{12858E46-EA87-45B6-9BCA-7C1EBB7C8BCA}.Debug|x86.ActiveCfg = Debug|Win32
+		{12858E46-EA87-45B6-9BCA-7C1EBB7C8BCA}.Debug|x86.Build.0 = Debug|Win32
+		{12858E46-EA87-45B6-9BCA-7C1EBB7C8BCA}.Release|x64.ActiveCfg = Release|x64
+		{12858E46-EA87-45B6-9BCA-7C1EBB7C8BCA}.Release|x64.Build.0 = Release|x64
+		{12858E46-EA87-45B6-9BCA-7C1EBB7C8BCA}.Release|x86.ActiveCfg = Release|Win32
+		{12858E46-EA87-45B6-9BCA-7C1EBB7C8BCA}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2878E115-08B9-44B3-9A02-7A263BA27AE9}
+	EndGlobalSection
+EndGlobal

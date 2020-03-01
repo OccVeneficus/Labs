@@ -1,4 +1,6 @@
 ﻿#include "DynamicArray.h"
+#include "../Common/IntegerReading.h"
+#include "../Common/Consts.h"
 #include <iostream>
 
 using namespace std;
@@ -208,21 +210,3 @@ void RecreateArray(DynamicArray &userArray)
 }
 
 //TODO: именование функций от существительного, а должно быть от глагола
-int ReadValue()
-{
-	int taxableIncome;
-	while(true) 
-	{
-		if (cin >> taxableIncome) 
-		{
-			break;
-		}
-		else 
-		{
-			cout << "You can enter only an integer: ";
-			cin.clear();
-			cin.ignore(numeric_limits<streamsize>::max(), '\n');
-		}
-	}
-	return taxableIncome;
-}
